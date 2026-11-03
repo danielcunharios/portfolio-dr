@@ -3,7 +3,7 @@ const $=s=>document.querySelector(s);
 $("#cases-list").innerHTML = CASES.map(c=>`
  <article class="case">
   ${c.screen?`<div class="shot">${SCREENS[c.screen]}<span class="cap">Recriação ilustrativa da interface</span></div>`
-    :c.cover?`<div class="shot photo"><img src="${c.cover[0]}" alt="${c.cover[1]}" width="${c.cover[2]}" height="${c.cover[3]}" decoding="async"></div>`
+    :c.cover?`<div class="shot photo"><img src="${c.cover[0]}" alt="${c.cover[1]}" width="${c.cover[2]}" height="${c.cover[3]}" loading="lazy" decoding="async"></div>`
     :`<div class="shot"><div class="art-panel"><span class="art-ic">${ART[c.art].icon}</span><div class="art-chips">${ART[c.art].chips.map(t=>`<span>${t}</span>`).join("")}</div></div></div>`}
   <div class="info">
    <div class="meta"><span class="tag">${c.year}</span>${c.tags.map(([k,t])=>`<span class="tag ${k}">${t}</span>`).join("")}</div>
@@ -16,7 +16,7 @@ $("#cases-list").innerHTML = CASES.map(c=>`
  </article>`).join("");
 $("#more").innerHTML = MORE.map(m=>`<button class="mini" type="button" data-open="${m.id}">
   <span class="cover">${m.photos?`<img src="${m.photos[0][0]}" alt="" width="${m.photos[0][2]}" height="${m.photos[0][3]}" loading="lazy" decoding="async"><span class="cnt">${m.photos.length} fotos</span>`:`<span class="ini">${m.art?ART[m.art].icon:""}</span>`}</span>
-  <div class="top"><span class="yr">${m.year}</span>${m.url?'<span class="yr">no ar ↗</span>':''}</div><h4>${m.title}</h4><p>${m.desc}</p><span class="go">Ver detalhes →</span></button>`).join("");
+  <span class="top"><span class="yr">${m.year}</span>${m.url?'<span class="yr">no ar ↗</span>':''}</span><span class="ttl">${m.title}</span><span class="ds">${m.desc}</span><span class="go">Ver detalhes →</span></button>`).join("");
 
 const ALL=[...CASES,...MORE], dlg=$("#dlg"), sheet=$("#sheet");
 let dlgTrigger=null;
@@ -39,6 +39,7 @@ function open(id,trigger){
    <div class="blk"><h4>Stack e temas</h4><div class="stack-line">${c.stack.map(s=>`<span>${s}</span>`).join("")}</div></div>
    <div class="case-actions">${c.url?`<a class="btn primary" href="${c.url}" target="_blank" rel="noopener">Ver no ar ↗</a>`:""}<button class="btn" type="button" data-close>Voltar</button></div>
   </div>`;
+  dlg.setAttribute("aria-labelledby","dTitle");
   dlg.showModal(); sheet.querySelector(".closer").focus(); sheet.scrollTop=0;
 }
 const lb=$("#lb"); let lbSet=[], lbI=0, lbTrigger=null;

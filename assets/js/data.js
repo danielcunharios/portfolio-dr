@@ -27,17 +27,17 @@ const SOC = [
 const SCREENS = {
 foresail:`<div class="browser"><div class="bbar"><i></i><i></i><i></i><span>app.foresail.com.br/projetos/checkout-v2</span></div>
  <div class="fs"><aside><b>Foresail</b><span class="on"></span><span></span><span></span><span></span><span></span></aside>
- <main><div class="gauge"><svg viewBox="0 0 100 60"><path d="M10 55a40 40 0 0 1 80 0" fill="none" stroke="var(--surface-2)" stroke-width="10" stroke-linecap="round"/><path d="M10 55a40 40 0 0 1 66-30" fill="none" stroke="var(--accent)" stroke-width="10" stroke-linecap="round"/></svg><b>72</b><small>Risk Score</small></div>
+ <div class="fs-main"><div class="gauge"><svg viewBox="0 0 100 60"><path d="M10 55a40 40 0 0 1 80 0" fill="none" stroke="var(--surface-2)" stroke-width="10" stroke-linecap="round"/><path d="M10 55a40 40 0 0 1 66-30" fill="none" stroke="var(--accent)" stroke-width="10" stroke-linecap="round"/></svg><b>72</b><small>Risk Score</small></div>
  <div class="alerts"><div class="alert"><i style="background:#E5484D"></i>12 PRs sem revisão há 6 dias</div><div class="alert"><i style="background:#F2A23A"></i>Velocidade do squad caiu 18%</div><div class="alert"><i style="background:#E8C547"></i>3 tickets bloqueados no sprint</div></div>
- <div class="chat"><em>IA:</em> o score subiu porque as revisões travaram em 2 devs.</div></main></div></div>`,
+ <div class="chat"><em>IA:</em> o score subiu porque as revisões travaram em 2 devs.</div></div></div></div>`,
 travia:`<div class="browser"><div class="bbar"><i></i><i></i><i></i><span>Travia · Conversas</span></div>
  <div class="tv"><aside class="tv-list"><b>Leads de hoje</b>
   <div class="tv-lead on"><i></i><span>Lead #1042<small>Qualificado pela IA</small></span></div>
   <div class="tv-lead"><i></i><span>Lead #1041<small>Aguardando datas</small></span></div>
   <div class="tv-lead"><i></i><span>Lead #1039<small>Carrinho enviado</small></span></div></aside>
- <main class="tv-chat"><div class="msg in">Oi! Queria 4 noites em dezembro para 2 adultos.</div>
+ <div class="tv-chat"><div class="msg in">Oi! Queria 4 noites em dezembro para 2 adultos.</div>
   <div class="msg out"><em>Agente de IA</em>Separei 3 hospedagens com preço real para essas datas. Quer incluir um passeio?</div>
-  <div class="cart"><b>Carrinho montado pela IA</b><span>Hospedagem · 4 noites</span><span>Passeio guiado</span><button type="button" tabindex="-1">Enviar link de pagamento</button></div></main></div></div>`
+  <div class="cart"><b>Carrinho montado pela IA</b><span>Hospedagem · 4 noites</span><span>Passeio guiado</span><button type="button" tabindex="-1">Enviar link de pagamento</button></div></div></div></div>`
 };
 
 /* Painéis de ícone para projetos sem imagem */
@@ -63,7 +63,7 @@ const CASES = [
    tags:[["win","Semifinalista Liga Jovem · Sebrae"],["","2 acelerações"],["","Edtech"]],
    pitch:"Edtech que recompensava estudantes de escola pública conforme o engajamento e a evolução nos estudos. Fundei aos 16 anos, ainda no ensino médio.",
    kpis:[["150+","alunos impactados na primeira escola pública adotante"],["2","acelerações: Novatores (UEFS) e Impactô ODS (Instituto Neoenergia)"]],
-   stack:["Edtech","Gamificação","MVP com IA","Impacto social"], url:"https://trenby.com.br",
+   stack:["Edtech","Gamificação","MVP com IA","Impacto social"],
    recog:[["Semifinalista","Desafio Liga Jovem 2023 · Sebrae"],["Acelerada","Novatores · UEFS"],["Acelerada","Impactô ODS · Instituto Neoenergia"]],
    context:"Nasceu no ensino médio, da vontade de mudar como se aprende no Brasil. A ideia era usar recompensa e tecnologia para trazer o aluno de volta para a aula.",
    problem:"A tecnologia e os jovens mudaram, mas as aulas continuaram iguais, e o engajamento dos alunos de escola pública caía.",

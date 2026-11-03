@@ -9,7 +9,9 @@ python3 -m http.server 8000
 # abra http://localhost:8000
 ```
 
-Sem dependências e sem build: HTML, CSS e JavaScript puros.
+Sem dependências e sem build: HTML, CSS e JavaScript puros. As fontes ficam em
+`assets/fonts/` e são servidas pelo próprio site, então o portfólio não depende de
+nenhum recurso externo para renderizar.
 
 ## Publicação
 

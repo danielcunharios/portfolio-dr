@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Daniel Rios · AI Builder | GTM Engineer, RevOps e Product Manager</title>
 <meta name="description" content="Daniel Rios, AI Builder: GTM Engineering, RevOps, Product, Sales e Dados. Lidera o go-to-market de um SaaS de IA no turismo e automatiza operações com n8n, Python e IA.">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0a0a0b">
 <link rel="canonical" href="https://portfolio-dr-six.vercel.app/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
@@ -20,9 +21,10 @@
 <meta name="twitter:site" content="@danrioss1">
 <meta name="twitter:image" content="https://portfolio-dr-six.vercel.app/assets/img/og-cover.png">
 <link rel="icon" type="image/png" href="assets/img/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700;800;900&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="preload" href="assets/fonts/schibsted-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/jetbrains-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/img/mascote.webp" as="image" type="image/webp" fetchpriority="high">
 <link rel="stylesheet" href="assets/css/styles.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Daniel Rios","alternateName":"Daniel da Cunha Rios","jobTitle":"AI Builder · Business Development e GTM","worksFor":{"@type":"Organization","name":"Just Travel","url":"https://justtraveltour.com"},"address":{"@type":"PostalAddress","addressCountry":"BR"},"alumniOf":[{"@type":"EducationalOrganization","name":"SENAI Bahia"},{"@type":"CollegeOrUniversity","name":"UNIFAN · Centro Universitário Nobre"}],"email":"mailto:danielcunharios@gmail.com","url":"https://portfolio-dr-six.vercel.app/","sameAs":["https://www.linkedin.com/in/daniel-rios-/","https://github.com/danielcunharios","https://instagram.com/danrioss","https://x.com/danrioss1"],"knowsAbout":["GTM Engineering","RevOps","Product Management","Business Development","Sales","Data Analysis","n8n","Make","Pipedrive","RD Station","Metabase","SQL","Python","Claude","AI automation"]}
@@ -31,7 +33,7 @@
 <body>
 <header class="navbar"><div class="wrap">
   <div class="pill">
-    <a class="logo" href="#inicio"><img src="assets/img/mascote.webp" alt="" width="448" height="620">Daniel Rios</a>
+    <a class="logo" href="#inicio"><img src="assets/img/mascote.webp" alt="" width="448" height="620" decoding="async">Daniel Rios</a>
     <nav aria-label="Seções"><a href="#sobre">Sobre</a><a href="#servicos">O que faço</a><a href="#cases">Cases</a><a href="#experiencia">Experiência</a><a href="#stack" id="navStack">Stack</a></nav>
     <button class="icon-btn" type="button" id="themeBtn" aria-label="Alternar tema claro e escuro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
     <a class="hire" href="#contato">Vamos conversar</a>
@@ -53,7 +55,7 @@
       <div class="social-row" id="heroSocial"></div>
     </div>
     <div class="portrait">
-      <div class="stage"><img src="assets/img/mascote.webp" alt="Mascote de Daniel Rios: jovem de óculos redondos, camiseta preta e braços cruzados, sorrindo" width="448" height="620" fetchpriority="high"></div>
+      <div class="stage"><img src="assets/img/mascote.webp" alt="Mascote de Daniel Rios: jovem de óculos redondos, camiseta preta e braços cruzados, sorrindo" width="448" height="620" fetchpriority="high" decoding="async"></div>
       <div class="badge b1"><span class="ic">3º</span><span><b>de 30+ times</b>hackathon Growthway</span></div>
       <div class="badge b2"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg></span><span><b>Gov. da Bahia</b>2 destinos lançados</span></div>
       <div class="badge b3"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12l5 5L20 6"/></svg></span><span><b>ROI de 347,7%</b>primeiras vendas da Travia</span></div>
@@ -149,10 +151,10 @@
     <p>A mesma sequência que usei na Trenby, na Travia, no Visite Morro do Chapéu e no Foresail.</p>
   </div>
   <div class="process">
-    <div class="step"><h4>Entender o problema</h4><p>Converso com quem sente a dor e com quem paga por ela. Escrevo o problema em uma frase antes de pensar em solução.</p><span class="t">entrevistas · 5W2H · dados</span></div>
-    <div class="step"><h4>Prototipar com IA</h4><p>Monto a primeira versão em horas ou dias com IA e no-code. Algo que dê para testar de verdade.</p><span class="t">Claude · Lovable · n8n</span></div>
-    <div class="step"><h4>Colocar no ar</h4><p>Lanço cedo, com usuário real, e ajusto pelo que acontece em produção.</p><span class="t">MVP · feedback · iteração</span></div>
-    <div class="step"><h4>Vender e medir</h4><p>Levo ao mercado com parcerias, campanha e time comercial. Acompanho leads, conversão e receita.</p><span class="t">GTM · funil · métricas</span></div>
+    <div class="step"><h3>Entender o problema</h3><p>Converso com quem sente a dor e com quem paga por ela. Escrevo o problema em uma frase antes de pensar em solução.</p><span class="t">entrevistas · 5W2H · dados</span></div>
+    <div class="step"><h3>Prototipar com IA</h3><p>Monto a primeira versão em horas ou dias com IA e no-code. Algo que dê para testar de verdade.</p><span class="t">Claude · Lovable · n8n</span></div>
+    <div class="step"><h3>Colocar no ar</h3><p>Lanço cedo, com usuário real, e ajusto pelo que acontece em produção.</p><span class="t">MVP · feedback · iteração</span></div>
+    <div class="step"><h3>Vender e medir</h3><p>Levo ao mercado com parcerias, campanha e time comercial. Acompanho leads, conversão e receita.</p><span class="t">GTM · funil · métricas</span></div>
   </div>
 </div></section>
 
@@ -167,25 +169,25 @@
       <article class="job cur"><div class="logo-box">JT</div><div>
         <h3><a href="https://justtraveltour.com" target="_blank" rel="noopener">Just Travel<span class="ext">justtraveltour.com ↗</span></a></h3><div class="co"><b>Travel tech</b> que une tecnologia e vendas no turismo · Travia, Visite a Bahia e Digitrade (com Embratur e Sebrae) · 2 anos</div>
         <div>
-          <div class="roleline now"><div class="rh"><b>Business Development</b><time>out 2025 – hoje</time></div><p>Lidero o go-to-market da <a href="https://travia.me" target="_blank" rel="noopener">Travia</a>, SaaS de IA comercial para o turismo: estratégia de produto, máquina de vendas e arquitetura de receita. Primeiras vendas poucas semanas após o lançamento, com ROI médio de 347,7% em out/26. Implantei pessoalmente o Visite Morro do Chapéu e o Visite Maraú, com mapeamento, capacitação e digitalização dos destinos, liderando a parte de produto.</p></div>
-          <div class="roleline"><div class="rh"><b>AI &amp; Automation for Product &amp; Ops</b><time>abr – out 2025</time></div><p>Automações com n8n e Python: qualificação de leads integrada ao CRM (antes, 20+ minutos por lead), vouchers personalizados automáticos (400+ por mês, ~30 minutos poupados em cada), notificação inteligente de vendas e cross-sell automático pelo WhatsApp.</p></div>
-          <div class="roleline"><div class="rh"><b>Estagiário</b><time>set 2024 – abr 2025</time></div><p>Fundraising da segunda rodada de investimentos, em contato com potenciais investidores. Depois, editais e competições de fomento à inovação e uma licitação.</p></div>
+          <div class="roleline now"><div class="rh"><b>Business Development</b><span class="when">out 2025 – hoje</span></div><p>Lidero o go-to-market da <a href="https://travia.me" target="_blank" rel="noopener">Travia</a>, SaaS de IA comercial para o turismo: estratégia de produto, máquina de vendas e arquitetura de receita. Primeiras vendas poucas semanas após o lançamento, com ROI médio de 347,7% em out/26. Implantei pessoalmente o Visite Morro do Chapéu e o Visite Maraú, com mapeamento, capacitação e digitalização dos destinos, liderando a parte de produto.</p></div>
+          <div class="roleline"><div class="rh"><b>AI &amp; Automation for Product &amp; Ops</b><span class="when">abr – out 2025</span></div><p>Automações com n8n e Python: qualificação de leads integrada ao CRM (antes, 20+ minutos por lead), vouchers personalizados automáticos (400+ por mês, ~30 minutos poupados em cada), notificação inteligente de vendas e cross-sell automático pelo WhatsApp.</p></div>
+          <div class="roleline"><div class="rh"><b>Estagiário</b><span class="when">set 2024 – abr 2025</span></div><p>Fundraising da segunda rodada de investimentos, em contato com potenciais investidores. Depois, editais e competições de fomento à inovação e uma licitação.</p></div>
         </div>
       </div></article>
       <article class="job"><div class="logo-box">VK</div><div>
         <h3><a href="https://www.usekobi.ai/" target="_blank" rel="noopener">KOBI<span class="ext">usekobi.ai ↗</span></a></h3><div class="co"><b>IA para vendas imobiliárias</b>: incorporadoras acompanham e reativam corretores parceiros pelo WhatsApp · São Paulo, remoto · 8 meses</div>
-        <div class="roleline"><div class="rh"><b>Customer Success Lead</b><time>mai – ago 2024</time></div><p>Estruturei o processo de CS e o relacionamento com os clientes, com responsabilidade direta pelo controle de churn enquanto liderei o setor.</p></div>
-        <div class="roleline"><div class="rh"><b>Operações</b><time>jan – abr 2024</time></div><p>Operações da plataforma e apoio ao desenvolvimento do produto.</p></div>
+        <div class="roleline"><div class="rh"><b>Customer Success Lead</b><span class="when">mai – ago 2024</span></div><p>Estruturei o processo de CS e o relacionamento com os clientes, com responsabilidade direta pelo controle de churn enquanto liderei o setor.</p></div>
+        <div class="roleline"><div class="rh"><b>Operações</b><span class="when">jan – abr 2024</span></div><p>Operações da plataforma e apoio ao desenvolvimento do produto.</p></div>
       </div></article>
       <article class="job"><div class="logo-box">CS</div><div>
         <h3>Cocria Sales</h3><div class="co"><b>Vendas B2B</b> · São Paulo, remoto</div>
-        <div class="roleline"><div class="rh"><b>Estagiário de vendas</b><time>abr 2023 – jan 2024</time></div><p>Prospecção e vendas B2B. Foi onde aprendi processo comercial de verdade.</p></div>
+        <div class="roleline"><div class="rh"><b>Estagiário de vendas</b><span class="when">abr 2023 – jan 2024</span></div><p>Prospecção e vendas B2B. Foi onde aprendi processo comercial de verdade.</p></div>
       </div></article>
       <article class="job"><div class="logo-box">↗</div><div>
         <h3>Negócios que fundei</h3><div class="co">Em paralelo, desde 2021</div>
-        <div class="roleline now"><div class="rh"><b><a href="https://lteiunifan.com.br/" target="_blank" rel="noopener">LTEI ↗</a> · fundador e presidente</b><time>set 2026 – hoje</time></div><p>Primeira liga dos cursos de tecnologia da UNIFAN. Organizo encontros com empresários de impacto para os mais de 50 membros.</p></div>
-        <div class="roleline"><div class="rh"><b><a href="https://trenby.com.br" target="_blank" rel="noopener">Trenby ↗</a> · fundador</b><time>nov 2022 – jan 2026</time></div><p>Edtech de recompensas por engajamento, com 150+ alunos na primeira escola pública adotante. Semifinalista do Desafio Liga Jovem 2023 do Sebrae e acelerada no Novatores (UEFS) e no Impactô ODS (Instituto Neoenergia).</p></div>
-        <div class="roleline"><div class="rh"><b>Descontaza · fundador</b><time>nov 2021 – fev 2023</time></div><p>Startup de varejo para lojistas e vendedores sem estoque, fundada aos 15 anos. Meu primeiro time.</p></div>
+        <div class="roleline now"><div class="rh"><b><a href="https://lteiunifan.com.br/" target="_blank" rel="noopener">LTEI ↗</a> · fundador e presidente</b><span class="when">set 2026 – hoje</span></div><p>Primeira liga dos cursos de tecnologia da UNIFAN. Organizo encontros com empresários de impacto para os mais de 50 membros.</p></div>
+        <div class="roleline"><div class="rh"><b>Trenby · fundador</b><span class="when">nov 2022 – jan 2026</span></div><p>Edtech de recompensas por engajamento, com 150+ alunos na primeira escola pública adotante. Semifinalista do Desafio Liga Jovem 2023 do Sebrae e acelerada no Novatores (UEFS) e no Impactô ODS (Instituto Neoenergia).</p></div>
+        <div class="roleline"><div class="rh"><b>Descontaza · fundador</b><span class="when">nov 2021 – fev 2023</span></div><p>Startup de varejo para lojistas e vendedores sem estoque, fundada aos 15 anos. Meu primeiro time.</p></div>
       </div></article>
     </div>
     <div class="side">
@@ -257,8 +259,8 @@
 
 <footer class="foot"><div class="wrap"><span>© 2026 Daniel Rios</span><span>Construído com IA e revisado por mim</span></div></footer>
 
-<dialog id="dlg" aria-labelledby="dTitle"><div class="sheet" id="sheet"></div></dialog>
-<dialog id="lb" aria-label="Foto ampliada"><figure class="lbx" style="margin:0"><button class="lbclose" type="button" aria-label="Fechar foto">✕</button><img id="lbImg" alt=""><button class="lbbtn prev" type="button" aria-label="Foto anterior">‹</button><button class="lbbtn next" type="button" aria-label="Próxima foto">›</button><figcaption><span id="lbCap"></span><br><span class="ctr" id="lbCtr"></span></figcaption></figure></dialog>
+<dialog id="dlg"><div class="sheet" id="sheet"></div></dialog>
+<dialog id="lb" aria-label="Foto ampliada"><figure class="lbx" style="margin:0"><button class="lbclose" type="button" aria-label="Fechar foto">✕</button><img id="lbImg" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><button class="lbbtn prev" type="button" aria-label="Foto anterior">‹</button><button class="lbbtn next" type="button" aria-label="Próxima foto">›</button><figcaption><span id="lbCap"></span><br><span class="ctr" id="lbCtr"></span></figcaption></figure></dialog>
 <script src="assets/js/data.js"></script>
 <script src="assets/js/main.js"></script>
 </body>

@@ -1,3 +1,12 @@
+/* Fontes servidas pelo próprio site (variáveis, subconjuntos latin e latin-ext do Google Fonts, licença OFL).
+   Evita a folha de estilo externa que bloqueava a renderização e o deslocamento de layout na troca de fonte. */
+@font-face{font-family:"Schibsted Grotesk";font-style:normal;font-weight:500 900;font-display:swap;src:url("../fonts/schibsted-grotesk-latin.woff2") format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:"Schibsted Grotesk";font-style:normal;font-weight:500 900;font-display:swap;src:url("../fonts/schibsted-grotesk-latin-ext.woff2") format("woff2");unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:"Instrument Sans";font-style:normal;font-weight:400 600;font-display:swap;src:url("../fonts/instrument-sans-latin.woff2") format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:"Instrument Sans";font-style:normal;font-weight:400 600;font-display:swap;src:url("../fonts/instrument-sans-latin-ext.woff2") format("woff2");unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:"JetBrains Mono";font-style:normal;font-weight:400 500;font-display:swap;src:url("../fonts/jetbrains-mono-latin.woff2") format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:"JetBrains Mono";font-style:normal;font-weight:400 500;font-display:swap;src:url("../fonts/jetbrains-mono-latin-ext.woff2") format("woff2");unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
+
 /* Layout: clean black & white editorial portfolio. Personal hero with mascot, about-me, services, case studies with recreated
    product screens, process, full experience + courses, contact. One accent: electric blue, used only for emphasis. */
 :root{
@@ -192,7 +201,7 @@ section.sec{padding-block:88px}
 .fs aside b{font-family:var(--f-display);font-size:10.5px;margin-bottom:6px}
 .fs aside span{height:7px;border-radius:4px;background:var(--surface-2)}
 .fs aside span.on{background:var(--accent)}
-.fs main{padding:12px;display:grid;grid-template-columns:120px 1fr;gap:10px;align-content:start}
+.fs .fs-main{padding:12px;display:grid;grid-template-columns:120px 1fr;gap:10px;align-content:start}
 .gauge{grid-row:span 2;background:var(--surface);border-radius:10px;padding:10px;text-align:center}
 .gauge svg{width:100%;height:auto}
 .gauge b{display:block;font-family:var(--f-display);font-size:22px;margin-top:-26px}
@@ -259,8 +268,8 @@ section.sec{padding-block:88px}
 .lbclose{position:absolute;top:-6px;right:0;transform:translateY(-100%);width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:rgba(0,0,0,.45);color:#fff;cursor:pointer}
 .mini .yr{font-family:var(--f-mono);font-size:12px;color:var(--muted)}
 .mini .em{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--invert);color:var(--invert-ink);font-family:var(--f-display);font-weight:800;font-size:14px}
-.mini h4{font-size:19px;font-weight:800}
-.mini p{font-size:14.5px;color:var(--muted)}
+.mini .ttl{display:block;font-family:var(--f-display);font-size:19px;font-weight:800;letter-spacing:-.03em;line-height:1.05}
+.mini .ds{display:block;font-size:14.5px;color:var(--muted)}
 .mini .go{margin-top:auto;font-size:13px;font-weight:600;color:var(--accent)}
 
 .process{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;counter-reset:s}
@@ -268,7 +277,7 @@ section.sec{padding-block:88px}
 @media (max-width:520px){.process{grid-template-columns:1fr}}
 .step{padding-top:20px;border-top:2px solid var(--ink)}
 .step::before{counter-increment:s;content:"0" counter(s);font-family:var(--f-mono);font-size:13px;color:var(--accent);display:block}
-.step h4{font-size:20px;font-weight:800;margin-top:10px}
+.step h3{font-size:20px;font-weight:800;margin-top:10px}
 .step p{font-size:15px;color:var(--muted);margin-top:8px}
 .step .t{font-family:var(--f-mono);font-size:11.5px;color:var(--muted);margin-top:14px;display:block}
 
@@ -289,8 +298,8 @@ section.sec{padding-block:88px}
 .roleline.now{border-left-color:var(--accent)}
 .roleline .rh{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
 .roleline .rh b{font-weight:600}
-.roleline time{font-family:var(--f-mono);font-size:12.5px;color:var(--muted);white-space:nowrap}
-.roleline.now time{color:var(--accent)}
+.roleline .when{font-family:var(--f-mono);font-size:12.5px;color:var(--muted);white-space:nowrap}
+.roleline.now .when{color:var(--accent)}
 .roleline p{color:var(--muted);font-size:15px;margin-top:4px}
 .side{display:grid;gap:36px;align-content:start}
 .job h3 a{text-decoration:none}

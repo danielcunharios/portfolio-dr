@@ -1,3 +1,7 @@
 .DS_Store
 node_modules/
 .vercel/
+
+# Material de origem do Daniel, fora do site publicado
+daniel-rios-pacote/
+*.patch

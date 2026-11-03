@@ -12,12 +12,14 @@ assets/css/styles.css todo o CSS, com tokens de cor em :root (tema claro padrão
 assets/js/data.js     CONTEÚDO: CONFIG (contatos), ICON, SOC, SCREENS (telas recriadas dos produtos), CASES, MORE, CATS, DAILY, BASIC
 assets/js/main.js     lógica: render de cases, modal de case, galeria/lightbox, contatos, stack (busca e filtro), roteador por hash, abas, tema
 assets/img/           mascote, favicon e fotos (WebP)
+assets/fonts/         as três fontes em WOFF2, servidas pelo próprio site
 ```
 
 - HTML, CSS e JS puros. Sem build, sem framework. Mantenha assim, salvo se o Daniel pedir outra coisa.
 - `data.js` e `main.js` são scripts clássicos: as constantes de `data.js` são globais e usadas por `main.js`. A ordem dos `<script>` importa.
 - Rotas: `#stack` mostra a página de stack e esconde `<main>`. Qualquer outro hash rola até a seção na home.
 - Identidade visual: preto e branco com **um** destaque azul (`--accent`). Fontes: Schibsted Grotesk (display), Instrument Sans (texto) e JetBrains Mono (rótulos).
+- As três fontes são variáveis, em WOFF2, servidas de `assets/fonts/` e declaradas em `@font-face` no topo do `styles.css`. Não volte para o Google Fonts: a folha externa bloqueava a renderização e a troca de fonte causava deslocamento de layout.
 - Idioma do site: português do Brasil.
 
 ## Regras
@@ -67,12 +69,12 @@ assets/img/           mascote, favicon e fotos (WebP)
 ### 3. Qualidade do código
 - [x] Rodar o site localmente por HTTP e checar o console sem erros, em desktop e em 375px, nos temas claro e escuro.
 - [x] Confirmar IDs únicos, metadados JSON-LD válidos e caminhos relativos funcionais no subdiretório do Pages.
-- [ ] Validar formalmente a conformidade do HTML.
-- [ ] Lighthouse com meta de 90+ em Performance, Acessibilidade, Boas práticas e SEO. Corrija o que aparecer, por exemplo: `width` e `height` nas imagens para evitar layout shift, `loading="lazy"` abaixo da dobra, `fetchpriority="high"` no mascote do hero.
+- [x] Validar formalmente a conformidade do HTML. `index.html`, `404.html` e `styles.css` passam sem nenhum erro no validador Nu do W3C, incluindo o DOM já montado pelo JavaScript.
+- [x] Lighthouse com meta de 90+ em Performance, Acessibilidade, Boas práticas e SEO. Chegou a **100 nas quatro** (nov/2026, medido localmente). O que fechou a conta: fontes no próprio site com `preload`, `preload` do mascote do hero, `loading="lazy"` nas capas dos cases e `width`/`height` em todas as imagens.
 - [x] Verificar contraste AA dos textos e estados principais nos dois temas.
 - [x] Testar teclado: foco no menu, abrir/fechar case com Escape, galeria com as setas e busca da stack.
-- [ ] Testar os links externos (sites dos projetos, referências e redes). Todos precisam abrir em nova aba com `rel="noopener"`.
-- [ ] Opcional: minificar CSS e JS no deploy, sem mudar os fontes.
+- [x] Testar os links externos (sites dos projetos, referências e redes). Todos respondem e todos abrem em nova aba com `rel="noopener"`. **Exceção: `trenby.com.br` não resolve mais (domínio inexistente), então o link saiu do case e da experiência; o projeto continua no site.** Se o Daniel renovar o domínio, basta devolver `url` ao case `trenby` em `data.js` e o link na linha da Trenby no `index.html`.
+- [ ] Opcional: minificar CSS e JS no deploy, sem mudar os fontes. Com 100 de Performance não é necessário; a Vercel já comprime os arquivos na entrega.
 
 ### 4. Publicação
 Produção: **Vercel** em `https://portfolio-dr-six.vercel.app/`, conectada à branch `main` do repositório `danielcunharios/portfolio-dr`.
