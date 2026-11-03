@@ -13,13 +13,14 @@ Sem dependências e sem build: HTML, CSS e JavaScript puros.
 
 ## Publicação
 
-O destino planejado é GitHub Pages no repositório público `danielcunharios/portfolio-dr`,
-em `https://danielcunharios.github.io/portfolio-dr/`. O diretório local já está
-conectado ao remoto `origin`; ainda não há commit ou publicação.
+A produção é servida pela Vercel em
+[`https://portfolio-dr-six.vercel.app/`](https://portfolio-dr-six.vercel.app/).
+O código-fonte está no repositório público
+[`danielcunharios/portfolio-dr`](https://github.com/danielcunharios/portfolio-dr),
+conectado ao remoto `origin`; a branch de publicação é `main`.
 
-Os dados não confirmados foram omitidos; as imagens no portfólio são de
-propriedade do autor. Configure GitHub Pages para publicar a branch `main` a
-partir da raiz do repositório.
+O site é estático e não requer build ou dependências. As imagens publicadas
+foram fornecidas e autorizadas pelo autor.
 
 ## Editar conteúdo
 

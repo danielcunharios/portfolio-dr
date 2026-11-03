@@ -30,74 +30,94 @@ foresail:`<div class="browser"><div class="bbar"><i></i><i></i><i></i><span>app.
  <main><div class="gauge"><svg viewBox="0 0 100 60"><path d="M10 55a40 40 0 0 1 80 0" fill="none" stroke="var(--surface-2)" stroke-width="10" stroke-linecap="round"/><path d="M10 55a40 40 0 0 1 66-30" fill="none" stroke="var(--accent)" stroke-width="10" stroke-linecap="round"/></svg><b>72</b><small>Risk Score</small></div>
  <div class="alerts"><div class="alert"><i style="background:#E5484D"></i>12 PRs sem revisão há 6 dias</div><div class="alert"><i style="background:#F2A23A"></i>Velocidade do squad caiu 18%</div><div class="alert"><i style="background:#E8C547"></i>3 tickets bloqueados no sprint</div></div>
  <div class="chat"><em>IA:</em> o score subiu porque as revisões travaram em 2 devs.</div></main></div></div>`,
-morro:`<div class="browser"><div class="bbar"><i></i><i></i><i></i><span>visitemorrodochapeu.com.br</span></div>
- <div class="vs-hero"><h4>Visite Morro do Chapéu</h4><svg viewBox="0 0 400 80" preserveAspectRatio="none"><path d="M0 80V48l50-22 40 14 60-34 50 30 45-12 55 24 50-16 50 20v28Z" fill="#4A2A3F"/><path d="M0 80V62l70-14 60 10 80-20 70 16 60-8 60 14v20Z" fill="#2B1A2C"/></svg></div>
- <div class="vs-search"><div><small>Destino</small>Chapada Diamantina</div><div><small>Check-in</small>12 dez</div><div><small>Hóspedes</small>2 adultos</div><button type="button" tabindex="-1">Buscar</button></div>
- <div class="vs-grid"><div class="vs-card"><div class="ph" style="background:linear-gradient(135deg,#8C6A4F,#C99A6B)"></div><div>Pousada<small>Hospedagem local</small></div></div><div class="vs-card"><div class="ph" style="background:linear-gradient(135deg,#3E7A5B,#8FB97A)"></div><div>Trilha guiada<small>Guia certificado</small></div></div><div class="vs-card"><div class="ph" style="background:linear-gradient(135deg,#B0512E,#E59A5B)"></div><div>Restaurante<small>Gastronomia</small></div></div></div></div>`,
-sprints:`<div class="browser"><div class="bbar"><i></i><i></i><i></i><span>sprints-5w2h · Sprint 2</span></div>
- <div class="kb"><div class="kb-col"><b>A fazer <span>3</span></b><div class="kb-card">Definir landing do evento<div class="w"><span>WHAT</span><span>WHO</span><span>WHEN</span></div></div><div class="kb-card">Orçar coffee break<div class="w"><span>HOW MUCH</span></div></div></div>
- <div class="kb-col"><b>Fazendo <span>2</span></b><div class="kb-card">Convidar palestrantes<div class="w"><span>WHY</span><span>WHO</span></div></div><div class="kb-card block">Reservar auditório<div class="w"><span>BLOQUEIO</span></div></div></div>
- <div class="kb-col"><b>Feito <span>4</span></b><div class="kb-card">Criar identidade<div class="w"><span>WHERE</span><span>HOW</span></div></div><div class="kb-card">Abrir inscrições<div class="w"><span>WHEN</span></div></div></div></div></div>`
+travia:`<div class="browser"><div class="bbar"><i></i><i></i><i></i><span>Travia · Conversas</span></div>
+ <div class="tv"><aside class="tv-list"><b>Leads de hoje</b>
+  <div class="tv-lead on"><i></i><span>Lead #1042<small>Qualificado pela IA</small></span></div>
+  <div class="tv-lead"><i></i><span>Lead #1041<small>Aguardando datas</small></span></div>
+  <div class="tv-lead"><i></i><span>Lead #1039<small>Carrinho enviado</small></span></div></aside>
+ <main class="tv-chat"><div class="msg in">Oi! Queria 4 noites em dezembro para 2 adultos.</div>
+  <div class="msg out"><em>Agente de IA</em>Separei 3 hospedagens com preço real para essas datas. Quer incluir um passeio?</div>
+  <div class="cart"><b>Carrinho montado pela IA</b><span>Hospedagem · 4 noites</span><span>Passeio guiado</span><button type="button" tabindex="-1">Enviar link de pagamento</button></div></main></div></div>`
 };
 
-const CASES = [
- { id:"foresail", screen:"foresail", title:"Foresail", year:"2026",
-   role:"Hackathon · time de 5 pessoas",
-   tags:[["live","no ar"],["win","3º de 30+ times"],["","SaaS · IA"]],
-   pitch:"SaaS que conecta GitHub e ferramentas de gestão e usa IA para calcular, em tempo real, o risco de cada projeto de software.",
-   kpis:[["48 h","da ideia à POC em produção"],["R$ 19","plano Pro, além do plano grátis"]],
-   stack:["IA generativa","GitHub OAuth","Risk Score","Freemium"], url:"https://foresail.com.br",
-   context:"Hackathon de 48 horas com mais de 30 equipes. O desafio era resolver um problema real de times de tecnologia.",
-   problem:"Líderes técnicos só descobrem que um projeto vai atrasar quando o prazo já estourou. Os sinais existem (PRs parados, tickets bloqueados, queda de velocidade), mas ficam espalhados em várias ferramentas.",
-   built:["Integração via OAuth com GitHub e ferramentas de gestão","Risk Score de 0 a 100 a partir de velocidade, revisões e bloqueios","Os 3 maiores riscos explicados em linguagem natural","Chat de IA para perguntar por que o score mudou","Página de vendas com planos Free e Pro"],
-   result:"3º lugar entre mais de 30 equipes e produto em produção desde então.",
-   learn:"Mostrar primeiro o que o usuário precisa ver (o score e os 3 alertas) fez a banca entender o produto em segundos." },
- { id:"morro", screen:"morro", title:"Visite Morro do Chapéu", year:"2025",
-   role:"Just Travel × Governo da Bahia · implantação em campo",
-   tags:[["live","no ar"],["","B2G"],["","Marketplace de turismo"]],
-   pitch:"Plataforma que coloca hospedagem, gastronomia, experiências e guias da Chapada Diamantina à venda para turistas do Brasil e do exterior.",
-   kpis:[["3 meses","em campo, da capacitação ao lançamento"],["400 mil+","de alcance com influenciadores no lançamento"]],
-   stack:["Marketplace","Go-to-market","Parcerias públicas","Capacitação"], url:"https://visitemorrodochapeu.com.br",
-   context:"Projeto Visite a Bahia, executado pela Just Travel com a Secretaria de Desenvolvimento Econômico, a Secretaria de Turismo e a Prefeitura de Morro do Chapéu.",
-   problem:"Pequenos empreendedores do turismo local não vendiam online e ficavam fora do radar de quem planeja uma viagem.",
-   built:["Implantação da plataforma no destino, morando três meses na cidade","Capacitação e certificação do trade com Senac, Sebrae, Banco do Nordeste e Desenbahia","Lançamento com influenciadores somando mais de 400 mil seguidores","Modelo replicável para outros destinos da Bahia"],
-   result:"Em poucos dias no ar: leads qualificados, milhares de visualizações orgânicas e as primeiras vendas, incluindo reservas internacionais.",
-   learn:"Tecnologia só vende num destino quando quem está na ponta sabe operar. A capacitação pesou tanto quanto o produto." },
- { id:"sprints", screen:"sprints", title:"Sprints 5W2H", year:"2026",
-   role:"Produto próprio · do banco de dados à interface",
-   tags:[["","Web app"],["","Gestão"],["","Supabase"]],
-   pitch:"App de gestão de sprints em que cada tarefa nasce com as perguntas do 5W2H, além de bloqueios, avisos e chat do time.",
-   kpis:[["5","pessoas usando"],["11","tabelas com segurança por linha"]],
-   stack:["Supabase","PostgreSQL","RLS","Multi-organização"], url:"",
-   problem:"Ferramentas comuns de tarefa não obrigam o time a responder o que, por quê, quem, quando, onde, como e quanto, e as tarefas ficam vagas.",
-   built:["Organizações, membros e perfis com segurança por linha (RLS)","Sprints, tarefas, conclusões e registro de bloqueios","Mural de avisos e mensagens com controle de leitura"],
-   result:"Em uso por 5 pessoas.",
-   learn:"Colocar o método dentro do produto muda o comportamento do time mais do que treinar o método." }
+/* Painéis de ícone para projetos sem imagem */
+const ART = {
+  kobi:{icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>', chips:["Processo de CS","Controle de churn","Relacionamento com a base"]},
+  stage:{icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v5M8 22h8"/></svg>', chips:["Empresários da região","Centenas de jovens","Inovação e tecnologia"]},
+  bag:{icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg>', chips:["Varejo","Vendas sem estoque","Primeiro time"]}
+};
+
+const JT_PROJECTS = [
+  ["Travia","https://travia.me","SaaS · IA","Plataforma de vendas para o turismo: CRM, WhatsApp oficial e agente de IA que qualifica leads e monta o carrinho.",true],
+  ["Digitrade","https://digitrade.embraturlab.com.br/","Embratur · Sebrae","Programa gratuito com workshops presenciais e aceleração individual para empreendedores do turismo venderem online, em 11 destinos do país.",false],
+  ["Visite Morro do Chapéu","https://visitemorrodochapeu.com.br","Gov. da Bahia","Destino digital da Chapada Diamantina. Implantei em campo.",true],
+  ["Visite Maraú","https://visitemarau.com","Prefeitura","Portal de promoção e venda da Península de Maraú. Implantei em campo.",true],
+  ["Visite Praia do Forte","https://www.visitepraiadoforte.com.br/pt","Destino","Reservas de hospedagem, ingressos, carros e seguros do destino.",false],
+  ["Come to Rio","https://reservas.come2rio.com/pt","Destino","Reservas de hospedagem, ingressos, carros e seguros para o Rio.",false],
+  ["Come to Brazil","https://cometobrazil.justtraveltour.com/pt","Marca","Reservas com atendimento de consultores especialistas.",false]
 ];
-const MORE = [
- { id:"trenby", em:"Tr", title:"Trenby", year:"2022", url:"https://trenby.com.br",
-   desc:"Edtech que recompensava estudantes pelo engajamento. Semifinal no Desafio Liga Jovem do Sebrae e duas acelerações.",
+
+const CASES = [
+ { id:"trenby", cover:["assets/img/trenby-hub-feira-time.webp","Time da Trenby no Hub Feira",960,1280], title:"Trenby", year:"2022",
    role:"Fundador · edtech · nov 2022 a jan 2026",
+   tags:[["win","Semifinalista Liga Jovem · Sebrae"],["","2 acelerações"],["","Edtech"]],
+   pitch:"Edtech que recompensava estudantes de escola pública conforme o engajamento e a evolução nos estudos. Fundei aos 16 anos, ainda no ensino médio.",
+   kpis:[["150+","alunos impactados na primeira escola pública adotante"],["2","acelerações: Novatores (UEFS) e Impactô ODS (Instituto Neoenergia)"]],
+   stack:["Edtech","Gamificação","MVP com IA","Impacto social"], url:"https://trenby.com.br",
    recog:[["Semifinalista","Desafio Liga Jovem 2023 · Sebrae"],["Acelerada","Novatores · UEFS"],["Acelerada","Impactô ODS · Instituto Neoenergia"]],
    context:"Nasceu no ensino médio, da vontade de mudar como se aprende no Brasil. A ideia era usar recompensa e tecnologia para trazer o aluno de volta para a aula.",
    problem:"A tecnologia e os jovens mudaram, mas as aulas continuaram iguais, e o engajamento dos alunos de escola pública caía.",
-   built:["MVP que recompensava estudantes e professores conforme a evolução de aprendizagem","Pilotos em escolas públicas","Semifinal do Desafio Liga Jovem 2023, competição nacional do Sebrae com o Instituto Ideias de Futuro, representando a Escola SESI José Carvalho","Aceleração no Novatores, programa da Agência de Inovação da UEFS","Aceleração no Impactô ODS, programa do Instituto Neoenergia com o Instituto Ekloos, com mentorias individuais e formações em captação de recursos"],
-   result:"Reconhecimento nacional e duas acelerações. O produto não escalou depois do MVP, mas abriu as portas que me levaram ao mercado.",
-   refs:[["Agência Sebrae Bahia: Equipe Trenby entre os semifinalistas do Desafio Liga Jovem 2023","https://ba.agenciasebrae.com.br/cultura-empreendedora/bahia-garante-duas-vagas-na-final-do-desafio-liga-jovem/"],["Instituto Neoenergia: Trenby entre as selecionadas do Impactô ODS 2025","https://www.neoenergia.com/web/instituto-neoenergia/colaboracao-institucional/impact%C3%B4-ods-2025"],["Novatores: programa de aceleração da UEFS","https://novatores.uefs.br"],["Site da Trenby","https://trenby.com.br"]],
-   photos:[["assets/img/trenby-hub-feira-time.webp","Time da Trenby no Hub Feira, em Feira de Santana",960,1280],["assets/img/trenby-hub-feira-1.webp","Com a camisa da Trenby no Hub Feira",960,1280],["assets/img/trenby-hub-feira-2.webp","Hub Feira, Feira de Santana",960,1280]],
-   stack:["Edtech","Gamificação","MVP","Impacto social"] },
- { id:"ltei", em:"LT", title:"LTEI · UNIFAN", year:"2026", url:"https://lteiunifan.com.br/", desc:"Liga gratuita que conecta alunos de tecnologia a empreendedores, empresas e oportunidades.",
-   role:"Fundador e presidente", context:"Liga estudantil voluntária dos cursos de Engenharia de Software, Engenharia da Computação e ADS da UNIFAN, em Feira de Santana, com coordenação docente e diretoria de alunos.", problem:"Alunos de tecnologia tinham ideias e projetos, mas pouco contato com o mercado e nenhum espaço para transformá-los em negócio.",
-   built:["Founder Talk: conversas com empreendedores do mercado","Market Sync: visitas e conexões com empresas e instituições","Journey: encontros práticos para validar e evoluir projetos","Radar de oportunidades com hackathons, editais e prêmios","Vitrine de projetos e vagas da rede, e o site lteiunifan.com.br"],
-   result:"Liga lançada em setembro de 2026 com seis fundadores e apoio da coordenação. Em outubro fizemos o Founder Talk #01, com mais de 20 pessoas na sala.",
-   photos:[["assets/img/ltei-founder-talk-01.webp","Founder Talk #01: membros da LTEI com o convidado, na UNIFAN",1280,720],["assets/img/ltei-founder-talk-abertura.webp","Abertura do Founder Talk #01",720,1280],["assets/img/ltei-founder-talk-convidado.webp","Apresentação do convidado do Founder Talk #01",720,1280]],
+   built:["MVP construído com IA e ferramentas prontas, que recompensava estudantes e professores conforme a evolução de aprendizagem","Primeira escola pública adotante, com mais de 150 alunos impactados","Semifinal do Desafio Liga Jovem 2023, competição nacional do Sebrae com o Instituto Ideias de Futuro, representando a Escola SESI José Carvalho","Aceleração no Novatores, programa da Agência de Inovação da UEFS","Aceleração no Impactô ODS, programa do Instituto Neoenergia com o Instituto Ekloos, com mentorias individuais e formações em captação de recursos"],
+   result:"Mais de 150 alunos impactados, reconhecimento nacional e duas acelerações. O produto não escalou depois do MVP, mas abriu as portas que me levaram ao mercado.",
+   refs:[["Agência Sebrae Bahia: Equipe Trenby entre os semifinalistas do Desafio Liga Jovem 2023","https://ba.agenciasebrae.com.br/cultura-empreendedora/bahia-garante-duas-vagas-na-final-do-desafio-liga-jovem/"],["Instituto Neoenergia: Trenby entre as selecionadas do Impactô ODS 2025","https://www.neoenergia.com/web/instituto-neoenergia/colaboracao-institucional/impact%C3%B4-ods-2025"],["Novatores: programa de aceleração da UEFS","https://novatores.uefs.br"]],
+   photos:[["assets/img/trenby-hub-feira-time.webp","Time da Trenby no Hub Feira",960,1280],["assets/img/trenby-hub-feira-1.webp","Com a camisa da Trenby no Hub Feira",960,1280],["assets/img/trenby-hub-feira-2.webp","Hub Feira",960,1280]] },
+ { id:"justtravel", cover:["assets/img/morro-chapada-equipe.webp","Equipe do Visite a Bahia em Morro do Chapéu, na Chapada Diamantina",1280,719], title:"Just Travel e Travia", year:"2024 – hoje",
+   role:"Just Travel · estágio, AI & Automation e hoje Business Development",
+   tags:[["live","no ar"],["win","ROI médio de 347,7%"],["","SaaS · IA · B2G"],["","Embratur · Sebrae"]],
+   pitch:"Na Just Travel lidero o go-to-market da Travia, um SaaS de IA comercial para o turismo. Antes, automatizei operações com n8n e Python e implantei em campo destinos digitais com o Governo da Bahia.",
+   kpis:[["347,7%","ROI médio das primeiras vendas da Travia (out/26)"],["3 mil+","passageiros gerados pelo Visite Morro do Chapéu"],["~200 h/mês","poupadas com vouchers automáticos (400+/mês)"],["60+","empreendedores impactados no destino"]],
+   stack:["GTM","Arquitetura de receita","n8n","Python","CRM","WhatsApp API","B2G"], url:"https://travia.me",
+   context:"A Just Travel é uma travel tech que une tecnologia e vendas no turismo. Além das plataformas de destino, a empresa realiza o Digitrade com a Embratur e o Sebrae: workshops presenciais e aceleração individual para empreendedores do turismo em 11 destinos do país, como Cavalcante (GO), Porto Alegre (RS), Alter do Chão (PA) e Cuiabá (MT). Entrei como estagiário em 2024, passei por automação com IA e hoje estou em Business Development.",
+   problem:"Agências, destinos e empreendedores do turismo perdem vendas por atendimento lento, processos manuais e pouca presença digital.",
+   built:["Travia (2026): responsável pela estratégia de produto, pela máquina de vendas e pela arquitetura de receita do novo SaaS de IA comercial para o turismo. Primeiras vendas poucas semanas após o lançamento oficial, com ROI médio de 347,7% em outubro de 2026","Visite Morro do Chapéu e Visite Maraú: implantei os projetos pessoalmente por meses, com mapeamento, capacitação e digitalização dos destinos, liderando a parte de produto junto com o time","Morro do Chapéu: mais de 60 empreendedores impactados, mais de 36 negócios mapeados e ativos online, mais de 3 mil passageiros gerados e ROI atingido em 8 meses","Automações com n8n e Python: qualificação inicial de leads integrada ao CRM (antes, pelo menos 20 minutos por lead), emissão automática de vouchers personalizados (400+ por mês, cerca de 30 minutos poupados em cada), notificação inteligente de vendas e cross-sell automático pelo WhatsApp","Fundraising da segunda rodada de investimentos, em contato com potenciais investidores, além de editais, competições de fomento à inovação e uma licitação"],
+   result:"Um produto novo vendendo com ROI médio de 347,7%, dois destinos digitais implantados e centenas de horas de trabalho manual eliminadas por mês.",
+   photos:[["assets/img/morro-chapada-equipe.webp","Equipe do Visite a Bahia em Morro do Chapéu, na Chapada Diamantina",1280,719],["assets/img/morro-lancamento-visite-a-bahia.webp","Lançamento oficial do Visite a Bahia · Morro do Chapéu",800,991],["assets/img/morro-time-just-travel.webp","Time da Just Travel no lançamento do Visite a Bahia",1280,720]],
+   links:JT_PROJECTS },
+ { id:"kobi", art:"kobi", title:"KOBI", year:"2024",
+   role:"Operações → Customer Success Lead · São Paulo, remoto",
+   tags:[["","IA para vendas imobiliárias"],["","Customer Success"]],
+   pitch:"Startup de IA em que incorporadoras acompanham e reativam corretores parceiros pelo WhatsApp. Comecei em operações e assumi o Customer Success.",
+   kpis:[["8 meses","de operações a liderança de CS"],["Churn","sob minha responsabilidade direta"]],
+   stack:["Customer Success","Retenção","Operações","PaaS"], url:"https://www.usekobi.ai/",
+   context:"Startup de São Paulo que usa IA para dar às incorporadoras visão em tempo real dos corretores parceiros.",
+   problem:"Uma base de clientes em crescimento precisava de processo de sucesso do cliente e de controle de churn.",
+   built:["Apoio às operações da plataforma e ao desenvolvimento do produto","Estruturação do processo de Customer Success e de relacionamento com os clientes","Responsável direto pelo controle de churn durante os meses em que liderei o setor"],
+   result:"Processo de CS estruturado e churn acompanhado de perto por mim enquanto liderei o setor." },
+ { id:"foresail", screen:"foresail", title:"Foresail", year:"2026",
+   role:"Hackathon Growthway · líder do time",
+   tags:[["live","no ar"],["win","3º de 30+ times"],["","SaaS · IA"]],
+   pitch:"SaaS que conecta GitHub e ferramentas de gestão e usa IA para calcular, em tempo real, o risco de cada projeto de software. Liderei o time e a gestão do desenvolvimento.",
+   kpis:[["48 h","da ideia à POC em produção"],["3º","lugar entre mais de 30 equipes"]],
+   stack:["IA generativa","GitHub OAuth","Risk Score","Freemium"], url:"https://foresail.com.br",
+   context:"Hackathon da Growthway, com 48 horas e mais de 30 equipes. Liderei um time de cinco pessoas e geri o desenvolvimento do produto.",
+   problem:"Líderes técnicos só descobrem que um projeto vai atrasar quando o prazo já estourou. Os sinais existem (PRs parados, tickets bloqueados, queda de velocidade), mas ficam espalhados em várias ferramentas.",
+   built:["Integração via OAuth com GitHub e ferramentas de gestão","Risk Score de 0 a 100 a partir de velocidade, revisões e bloqueios","Os 3 maiores riscos explicados em linguagem natural","Chat de IA para perguntar por que o score mudou","Página de vendas com planos Free e Pro"],
+   result:"3º lugar entre mais de 30 equipes e produto em produção desde então.",
+   learn:"Mostrar primeiro o que o usuário precisa ver (o score e os 3 alertas) fez a banca entender o produto em segundos." }
+];
+const MORE = [
+ { id:"ltei", title:"LTEI · UNIFAN", year:"2026", url:"https://lteiunifan.com.br/", desc:"Primeira liga dos cursos de tecnologia da UNIFAN. Fundei, presido e organizo encontros com empresários para os 50+ membros.",
+   role:"Fundador e presidente", context:"Primeira liga acadêmica dos cursos de tecnologia da UNIFAN (Engenharia de Software, Engenharia da Computação e ADS), voluntária e gratuita, com coordenação docente e diretoria de alunos.", problem:"Alunos de tecnologia tinham ideias e projetos, mas pouco contato com o mercado e nenhum espaço para transformá-los em negócio.",
+   built:["Fundação da primeira liga dos cursos de tecnologia da instituição","Founder Talk: encontros com empresários de impacto para os mais de 50 membros","Market Sync: visitas e conexões com empresas e instituições","Journey: encontros práticos para validar e evoluir projetos","Radar de oportunidades com hackathons, editais e prêmios, e o site lteiunifan.com.br"],
+   result:"Liga lançada em setembro de 2026, com mais de 50 membros. Em outubro fizemos o Founder Talk #01, com mais de 20 pessoas na sala.",
+   photos:[["assets/img/ltei-founder-talk-01.webp","Founder Talk #01: membros da LTEI com o convidado",1280,720],["assets/img/ltei-founder-talk-abertura.webp","Abertura do Founder Talk #01",720,1280],["assets/img/ltei-founder-talk-convidado.webp","Apresentação do convidado do Founder Talk #01",720,1280]],
    stack:["Comunidade","Liderança","Eventos"] },
- { id:"asterbela", em:"AB", title:"AsterBela", year:"2026", desc:"Loja de moda feminina com catálogo no WhatsApp e programa de indicação.",
-   role:"Fundador · Feira de Santana", context:"Negócio próprio de moda, registrado como MEI.", problem:"Vender moda localmente sem depender de loja física.",
-   built:["Catálogo e grupo de ofertas no WhatsApp","5% na primeira compra em troca de contato","15% de desconto para quem indica"], stack:["E-commerce","Growth","WhatsApp"] },
- { id:"descontaza", em:"Dz", title:"Descontaza", year:"2021", desc:"Startup de varejo para pequenos lojistas e vendedores sem estoque.",
-   role:"Fundador", context:"Meu primeiro negócio.", problem:"Pequenos lojistas sem ferramentas para vender sem estoque.",
-   built:["Público-alvo e mapa de concorrentes","Estratégia de marketing e vendas com o time"], result:"Primeira experiência liderando um time do zero.", stack:["Varejo","Vendas"] }
+ { id:"creators", art:"stage", title:"Creators Teens · Mundo SENAI", year:"SENAI", desc:"Evento de inovação que organizei no ensino médio, com empresários da região e centenas de jovens.",
+   role:"Organizador", context:"Evento realizado no SENAI Bahia, ainda no ensino médio.", problem:"Jovens tinham pouco acesso a conteúdo prático sobre inovação, tecnologia e empreendedorismo, e pouco contato com quem empreende.",
+   built:["Organização do evento em um fim de semana","Reunião de empresários relevantes da região","Conteúdos sobre inovação, tecnologia e empreendedorismo"], result:"Centenas de jovens impactados em um fim de semana.", stack:["Eventos","Comunidade","Educação"] },
+ { id:"descontaza", art:"bag", title:"Descontaza", year:"2021", desc:"Meu primeiro negócio, fundado aos 15 anos: soluções para pequenos lojistas e vendedores sem estoque.",
+   role:"Fundador", context:"Meu primeiro negócio, fundado aos 15 anos.", problem:"Pequenos lojistas sem ferramentas para vender sem estoque.",
+   built:["Definição de público-alvo e mapa de concorrentes","Estratégia de marketing e vendas com o time"], result:"Primeira experiência liderando um time do zero.", stack:["Varejo","Vendas"] }
 ];
 
 /* ============ STACK ============ */
@@ -112,21 +132,22 @@ const DAILY = [
  T("Lovable","Lv","build","MVPs de interface com IA"),
  T("v0","v0","build","Telas e componentes gerados com IA"),
  T("Vercel","Vc","build","Deploy de sites e apps"),
- T("Python","Py","build","Scripts, automações e dados"),
+ T("Python","Py","build","Automações e scripts integrados ao n8n"),
  T("HTML","H5","build","Estrutura de páginas web"),
  T("CSS","CS","build","Estilo e layout responsivo"),
  T("JavaScript","JS","build","Interações e lógica no front-end"),
- T("n8n","n8","auto","Fluxos de automação e agentes de IA"),
+ T("n8n","n8","auto","Automações de leads, vouchers, vendas e WhatsApp"),
  T("Make","Mk","auto","Integrações entre ferramentas"),
  T("WhatsApp API Oficial","WA","auto","Atendimento e vendas no WhatsApp"),
  T("Chatwoot","Cw","auto","Central de atendimento omnichannel"),
- T("Pipedrive","Pd","gtm","CRM e pipeline de vendas"),
+ T("Pipedrive","Pd","gtm","CRM, pipeline e qualificação de leads"),
  T("RD Station","RD","gtm","Automação de marketing e gestão de leads"),
  T("Mautic","Mt","gtm","Automação de marketing open source"),
  T("Meta","Me","gtm","Anúncios e Business Suite"),
  T("LinkedIn","Li","gtm","Prospecção, social selling e marca pessoal"),
  T("Pipefy","Pf","gestao","Processos e fluxos operacionais"),
- T("Metabase","Mb","dados","Dashboards e consultas de dados"),
+ T("Metabase","Mb","dados","Dashboards estratégicos de vendas e resultados"),
+ T("SQL","SQ","dados","Consultas para análise de vendas no Metabase"),
  T("Figma","Fg","design","Protótipos e interfaces"),
  T("Google Workspace","GW","gestao","Docs, Planilhas, Drive e Meet"),
  T("Pacote Office","Of","gestao","Excel, Word e PowerPoint"),
@@ -142,7 +163,7 @@ const DAILY = [
 const BASIC = [
  T("Power BI","BI","dados","Dashboards e relatórios"),
  T("MySQL","My","dados","Banco de dados relacional"),
- T("PostgreSQL","PG","dados","Banco relacional, usado com Supabase"),
+ T("PostgreSQL","PG","dados","Banco de dados relacional"),
  T("Redis","Rd","dados","Cache e filas em memória"),
  T("AWS","AW","dados","Cloud da Amazon"),
  T("Google Cloud","GC","dados","Cloud do Google"),
