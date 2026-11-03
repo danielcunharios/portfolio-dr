@@ -38,7 +38,8 @@ assets/fonts/         as três fontes em WOFF2, servidas pelo próprio site
 - **Ordem dos projetos:** 1. Trenby, 2. Just Travel e Travia, 3. KOBI, 4. Foresail (cases grandes em `CASES`), depois 5. LTEI, 6. Creators Teens · Mundo SENAI e 7. Descontaza (em `MORE`).
 - **Imagens:** só as fotos que o Daniel enviar. Projetos sem foto usam painel de ícone (`ART`) ou tela recriada (`SCREENS`). Nunca deixe espaço vazio.
 - **Não usar o mascote no bloco de contato** (ficava cortado). No hero ele deve aparecer inteiro, sem cortar a cabeça.
-- URL de produção: **https://portfolio-dr-six.vercel.app/** (Vercel). Canonical, Open Graph, JSON-LD, robots e sitemap apontam para ela.
+- URL de produção: **https://daniel-rios-my-portfolio.vercel.app/** (Vercel). Canonical, Open Graph, JSON-LD, robots e sitemap apontam para ela.
+- O domínio anterior, `portfolio-dr-six.vercel.app`, era o nome automático antigo do projeto na Vercel e hoje responde 307 para o atual. Não o use em metadado nenhum.
 
 ## Dados confirmados (use como fonte)
 
@@ -62,7 +63,7 @@ assets/fonts/         as três fontes em WOFF2, servidas pelo próprio site
 
 ### 2. SEO e compartilhamento
 - [x] Criar `assets/img/og-cover.png` (1200×630) com o mascote, nome e posicionamento.
-- [x] Configurar `canonical`, Open Graph, Twitter Cards e JSON-LD para `https://portfolio-dr-six.vercel.app/`.
+- [x] Configurar `canonical`, Open Graph, Twitter Cards e JSON-LD para `https://daniel-rios-my-portfolio.vercel.app/`.
 - [x] Criar `robots.txt`, `sitemap.xml` e `404.html`.
 - [x] Confirmar palavras-chave de GTM, RevOps, Product, Sales, Business Development, Dados e IA nos metadados e no JSON-LD.
 
@@ -78,7 +79,7 @@ assets/fonts/         as três fontes em WOFF2, servidas pelo próprio site
 - [ ] Opcional: minificar CSS e JS no deploy, sem mudar os fontes. Com 100 de Performance não é necessário; a Vercel já comprime os arquivos na entrega.
 
 ### 4. Publicação
-Produção: **Vercel** em `https://portfolio-dr-six.vercel.app/`, conectada à branch `main` do repositório `danielcunharios/portfolio-dr`.
+Produção: **Vercel** em `https://daniel-rios-my-portfolio.vercel.app/`, conectada à branch `main` do repositório `danielcunharios/portfolio-dr`.
 - [x] Confirmar que as fotos da LTEI e da Trenby pertencem ao autor e podem ser publicadas.
 - [x] Tornar público o repositório existente `danielcunharios/portfolio-dr`.
 - [ ] Peça confirmação ao Daniel antes de cada push.

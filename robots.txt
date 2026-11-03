@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://portfolio-dr-six.vercel.app/sitemap.xml
+Sitemap: https://daniel-rios-my-portfolio.vercel.app/sitemap.xml

@@ -16,10 +16,11 @@ nenhum recurso externo para renderizar.
 ## Publicação
 
 A produção é servida pela Vercel em
-[`https://portfolio-dr-six.vercel.app/`](https://portfolio-dr-six.vercel.app/).
+[`https://daniel-rios-my-portfolio.vercel.app/`](https://daniel-rios-my-portfolio.vercel.app/).
 O código-fonte está no repositório público
 [`danielcunharios/portfolio-dr`](https://github.com/danielcunharios/portfolio-dr),
 conectado ao remoto `origin`; a branch de publicação é `main`.
+O domínio antigo `portfolio-dr-six.vercel.app` redireciona para o atual.
 
 O site é estático e não requer build ou dependências. As imagens publicadas
 foram fornecidas e autorizadas pelo autor.
