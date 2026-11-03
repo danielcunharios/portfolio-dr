@@ -71,7 +71,7 @@ assets/fonts/         as três fontes em WOFF2, servidas pelo próprio site
 - [x] Rodar o site localmente por HTTP e checar o console sem erros, em desktop e em 375px, nos temas claro e escuro.
 - [x] Confirmar IDs únicos, metadados JSON-LD válidos e caminhos relativos funcionais no subdiretório do Pages.
 - [x] Validar formalmente a conformidade do HTML. `index.html`, `404.html` e `styles.css` passam sem nenhum erro no validador Nu do W3C, incluindo o DOM já montado pelo JavaScript.
-- [x] Lighthouse com meta de 90+ em Performance, Acessibilidade, Boas práticas e SEO. Em produção (nov/2026): **Acessibilidade, Boas práticas e SEO em 100**, Performance entre **91 e 98** em quatro rodadas, com CLS 0. No localhost dá 100 nas quatro. O que fechou a conta: fontes no próprio site com `preload` e fallbacks de métricas casadas, `preload` do mascote do hero, `loading="lazy"` nas capas dos cases e `width`/`height` em todas as imagens.
+- [x] Lighthouse com meta de 90+ em Performance, Acessibilidade, Boas práticas e SEO. Medido no domínio atual (nov/2026): **Acessibilidade, Boas práticas e SEO em 100** e Performance entre **98 e 100** em três rodadas, com CLS 0. O que fechou a conta: fontes no próprio site com `preload` e fallbacks de métricas casadas, `preload` do mascote do hero, `loading="lazy"` nas capas dos cases e `width`/`height` em todas as imagens.
 - Meça a Performance em produção **mais de uma vez**: o localhost esconde o CLS da troca de fonte, porque lá a fonte sempre chega antes da primeira pintura.
 - [x] Verificar contraste AA dos textos e estados principais nos dois temas.
 - [x] Testar teclado: foco no menu, abrir/fechar case com Escape, galeria com as setas e busca da stack.
