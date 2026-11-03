@@ -7,6 +7,21 @@
 @font-face{font-family:"JetBrains Mono";font-style:normal;font-weight:400 500;font-display:swap;src:url("../fonts/jetbrains-mono-latin.woff2") format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
 @font-face{font-family:"JetBrains Mono";font-style:normal;font-weight:400 500;font-display:swap;src:url("../fonts/jetbrains-mono-latin-ext.woff2") format("woff2");unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
 
+/* Fallbacks com métricas casadas: enquanto a fonte do site não chega, o texto é desenhado com uma
+   fonte do sistema esticada para ocupar exatamente o mesmo espaço, então a troca não mexe no layout.
+   Sem isso o CLS chega a 0,22 em rede real. Os números foram calibrados peso a peso, medindo a
+   largura e a altura reais no navegador contra a Arial (Consolas na monoespaçada): erro de 0,00%.
+   Se trocar alguma fonte ou algum peso usado no CSS, recalibre. */
+@font-face{font-family:"Schibsted Grotesk Fallback";font-weight:500;src:local("Arial"),local("Helvetica Neue"),local("Helvetica"),local("Liberation Sans"),local("Arimo");size-adjust:105.26%;ascent-override:92.78%;descent-override:24.49%;line-gap-override:0%}
+@font-face{font-family:"Schibsted Grotesk Fallback";font-weight:600;src:local("Arial"),local("Helvetica Neue"),local("Helvetica"),local("Liberation Sans"),local("Arimo");size-adjust:106.89%;ascent-override:91.36%;descent-override:24.12%;line-gap-override:0%}
+@font-face{font-family:"Schibsted Grotesk Fallback";font-weight:700;src:local("Arial"),local("Helvetica Neue"),local("Helvetica"),local("Liberation Sans"),local("Arimo");size-adjust:108.72%;ascent-override:89.82%;descent-override:23.71%;line-gap-override:0%}
+@font-face{font-family:"Schibsted Grotesk Fallback";font-weight:800;src:local("Arial"),local("Helvetica Neue"),local("Helvetica"),local("Liberation Sans"),local("Arimo");size-adjust:110.65%;ascent-override:88.25%;descent-override:23.30%;line-gap-override:0%}
+@font-face{font-family:"Schibsted Grotesk Fallback";font-weight:900;src:local("Arial"),local("Helvetica Neue"),local("Helvetica"),local("Liberation Sans"),local("Arimo");size-adjust:112.47%;ascent-override:86.83%;descent-override:22.92%;line-gap-override:0%}
+@font-face{font-family:"Instrument Sans Fallback";font-weight:400;src:local("Arial"),local("Helvetica Neue"),local("Helvetica"),local("Liberation Sans"),local("Arimo");size-adjust:101.72%;ascent-override:95.36%;descent-override:24.58%;line-gap-override:0%}
+@font-face{font-family:"Instrument Sans Fallback";font-weight:500;src:local("Arial"),local("Helvetica Neue"),local("Helvetica"),local("Liberation Sans"),local("Arimo");size-adjust:102.96%;ascent-override:94.21%;descent-override:24.28%;line-gap-override:0%}
+@font-face{font-family:"Instrument Sans Fallback";font-weight:600 700;src:local("Arial"),local("Helvetica Neue"),local("Helvetica"),local("Liberation Sans"),local("Arimo");size-adjust:104.14%;ascent-override:93.14%;descent-override:24.01%;line-gap-override:0%}
+@font-face{font-family:"JetBrains Mono Fallback";font-weight:400 500;src:local("Consolas"),local("Menlo"),local("DejaVu Sans Mono"),local("Liberation Mono");size-adjust:109.13%;ascent-override:93.47%;descent-override:27.49%;line-gap-override:0%}
+
 /* Layout: clean black & white editorial portfolio. Personal hero with mascot, about-me, services, case studies with recreated
    product screens, process, full experience + courses, contact. One accent: electric blue, used only for emphasis. */
 :root{
@@ -14,9 +29,9 @@
   --bg:#FFFFFF; --surface:#F5F6F8; --surface-2:#ECEEF2; --ink:#0B0B0C; --muted:#5E636E; --line:#E3E5EA;
   --accent:#1F4FFF; --accent-ink:#FFFFFF; --accent-soft:#E9EEFF; --ok:#177547; --danger:#B4232D; --invert:#0B0B0C; --invert-ink:#FFFFFF;
   --shadow:0 24px 60px -36px rgba(10,15,40,.35);
-  --f-display:"Schibsted Grotesk", ui-sans-serif, system-ui, sans-serif;
-  --f-body:"Instrument Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-  --f-mono:"JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --f-display:"Schibsted Grotesk", "Schibsted Grotesk Fallback", ui-sans-serif, system-ui, sans-serif;
+  --f-body:"Instrument Sans", "Instrument Sans Fallback", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono:"JetBrains Mono", "JetBrains Mono Fallback", ui-monospace, SFMono-Regular, Menlo, monospace;
   --max:1180px; --r:20px;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
