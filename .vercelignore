@@ -1,0 +1,5 @@
+# Fora do que a Vercel publica: o site é só o HTML, o CSS, o JS e os assets.
+# Sem isto a Vercel serve o repositório inteiro, e o utilitário ficaria
+# baixável em /tools/gerar-logos.py.
+tools/
+CLAUDE.md
