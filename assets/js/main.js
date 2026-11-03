@@ -77,7 +77,9 @@ $("#copyMail").addEventListener("click",e=>{
   const sel=()=>{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);};
   navigator.clipboard?navigator.clipboard.writeText(CONFIG.email).then(ok).catch(sel):sel();
 });
-const mq=$("#marquee"); mq.innerHTML+=mq.innerHTML;
+const mq=$("#marquee"), mqN=mq.children.length;
+mq.innerHTML+=mq.innerHTML;
+[...mq.children].slice(mqN).forEach(li=>li.setAttribute("aria-hidden","true"));
 
 const root=document.documentElement;
 const themeBtn=$("#themeBtn");

@@ -13,6 +13,9 @@ Sem dependências e sem build: HTML, CSS e JavaScript puros. As fontes ficam em
 `assets/fonts/` e são servidas pelo próprio site, então o portfólio não depende de
 nenhum recurso externo para renderizar.
 
+A pasta `tools/` guarda utilitários offline (hoje, o gerador dos logos). Eles
+não entram no site nem rodam no deploy, e só precisam do Pillow para rodar.
+
 ## Publicação
 
 A produção é servida pela Vercel em

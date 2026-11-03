@@ -33,17 +33,20 @@
   --f-body:"Instrument Sans", "Instrument Sans Fallback", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --f-mono:"JetBrains Mono", "JetBrains Mono Fallback", ui-monospace, SFMono-Regular, Menlo, monospace;
   --max:1180px; --r:20px;
+  --ink-invert:0; --ink-invert-alt:1;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   color-scheme:dark;
   --bg:#0A0A0B; --surface:#141518; --surface-2:#1C1E22; --ink:#F4F5F7; --muted:#9BA0AB; --line:#26282E;
   --accent:#5B82FF; --accent-ink:#05070F; --accent-soft:#131B36; --ok:#43D17F; --danger:#FF6B72; --invert:#F4F5F7; --invert-ink:#0A0A0B;
-  --shadow:0 24px 60px -36px rgba(0,0,0,.9); color-scheme:dark}}
+  --shadow:0 24px 60px -36px rgba(0,0,0,.9); color-scheme:dark;
+  --ink-invert:1; --ink-invert-alt:0}}
 :root[data-theme="dark"]{
   color-scheme:dark;
   --bg:#0A0A0B; --surface:#141518; --surface-2:#1C1E22; --ink:#F4F5F7; --muted:#9BA0AB; --line:#26282E;
   --accent:#5B82FF; --accent-ink:#05070F; --accent-soft:#131B36; --ok:#43D17F; --danger:#FF6B72; --invert:#F4F5F7; --invert-ink:#0A0A0B;
-  --shadow:0 24px 60px -36px rgba(0,0,0,.9); color-scheme:dark}
+  --shadow:0 24px 60px -36px rgba(0,0,0,.9); color-scheme:dark;
+  --ink-invert:1; --ink-invert-alt:0}
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -157,6 +160,12 @@ section.sec{padding-block:88px}
 .track{overflow:hidden;flex:1;min-width:0;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
 .track ul{list-style:none;margin:0;padding:0;display:flex;gap:44px;width:max-content;animation:marq 45s linear infinite}
 .track li{font-family:var(--f-display);font-weight:700;font-size:16px;color:var(--muted);white-space:nowrap}
+/* Logos: tinta preta com transparência, geradas a partir dos PNGs da marca. Uma só imagem serve
+   aos dois temas, porque no escuro a tinta é invertida. Dentro da caixa do trabalho atual, que já
+   é invertida, a tinta usa --ink-invert-alt para não sumir no fundo. */
+.track li img{display:block;height:34px;width:auto;opacity:.75;filter:invert(var(--ink-invert))}
+.logo-box img{width:34px;height:34px;opacity:.85;filter:invert(var(--ink-invert))}
+.job.cur .logo-box img{filter:invert(var(--ink-invert-alt))}
 @keyframes marq{to{transform:translateX(-50%)}}
 @media (max-width:640px){.partners .wrap{flex-direction:column;align-items:flex-start;gap:12px}.track{width:100%}}
 

@@ -13,6 +13,8 @@ assets/js/data.js     CONTEÚDO: CONFIG (contatos), ICON, SOC, SCREENS (telas re
 assets/js/main.js     lógica: render de cases, modal de case, galeria/lightbox, contatos, stack (busca e filtro), roteador por hash, abas, tema
 assets/img/           mascote, favicon e fotos (WebP)
 assets/fonts/         as três fontes em WOFF2, servidas pelo próprio site
+assets/img/logos/     logos de parceiros e empresas, já convertidos (veja abaixo)
+tools/                utilitários offline, fora do site e fora do deploy
 ```
 
 - HTML, CSS e JS puros. Sem build, sem framework. Mantenha assim, salvo se o Daniel pedir outra coisa.
@@ -20,6 +22,9 @@ assets/fonts/         as três fontes em WOFF2, servidas pelo próprio site
 - Rotas: `#stack` mostra a página de stack e esconde `<main>`. Qualquer outro hash rola até a seção na home.
 - Identidade visual: preto e branco com **um** destaque azul (`--accent`). Fontes: Schibsted Grotesk (display), Instrument Sans (texto) e JetBrains Mono (rótulos).
 - As três fontes são variáveis, em WOFF2, servidas de `assets/fonts/` e declaradas em `@font-face` no topo do `styles.css`. Não volte para o Google Fonts: a folha externa bloqueava a renderização e a troca de fonte causava deslocamento de layout.
+- **Logos:** os arquivos em `assets/img/logos/` são tinta preta com transparência, não os PNGs coloridos da marca. A opacidade de cada pixel é o quanto ele se afasta do fundo, então uma só imagem serve aos dois temas: no claro aparece preta e no escuro o CSS aplica `filter:invert(...)`. É isso que evita os retângulos brancos que os PNGs com fundo sólido deixariam no tema escuro. Os tokens `--ink-invert` e `--ink-invert-alt` fazem a inversão; o `alt` usa a segunda dentro da caixa do trabalho atual, que já é invertida.
+- Para somar um logo novo: salve o PNG da marca e rode `python tools/gerar-logos.py <pasta-dos-png>`. O script imprime o `width` e o `height` que o `<img>` precisa ter. Para um lockup horizontal que vá entrar na caixa quadrada da experiência, passe o nome do arquivo como argumento e ele gera também a versão só do ícone.
+- Logos deitados não cabem na caixa de 56px da experiência: ali vai o ícone da marca (`-icon.webp`), porque o nome da empresa já está do lado, em destaque. Na esteira de parceiros, marcas empilhadas em várias linhas viram borrão: deixe essas como texto (é o caso do Governo da Bahia).
 - Idioma do site: português do Brasil.
 
 ## Regras
