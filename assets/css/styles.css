@@ -440,9 +440,10 @@ dialog::backdrop{background:rgba(5,6,12,.6);backdrop-filter:blur(4px)}
 .mini .cover .ini svg{width:46px;height:46px}
 /* tela recriada da Finquer: a lista de regras de alçada */
 .fq{padding:12px;display:grid;gap:7px;align-content:start;min-height:250px}
-.fq-top{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:2px}
-.fq-top b{font-family:var(--f-display);font-size:12px}
+.fq-top{display:flex;justify-content:space-between;align-items:center;gap:8px;padding-bottom:9px;border-bottom:1px solid var(--line)}
+.fq-top img{height:14px;width:auto;opacity:.82;filter:invert(var(--ink-invert))}
 .fq-top span{font-family:var(--f-mono);font-size:9px;color:var(--muted)}
+.fq-h{font-family:var(--f-display);font-size:12px;font-weight:800;letter-spacing:-.02em}
 .fq-rule{display:grid;grid-template-columns:14px 1fr auto;gap:8px;align-items:center;background:var(--surface);border-radius:9px;padding:7px 9px}
 .fq-rule .n{font-family:var(--f-mono);font-size:9px;color:var(--muted)}
 .fq-rule em{font-style:normal;font-weight:600;font-size:10px;white-space:nowrap}

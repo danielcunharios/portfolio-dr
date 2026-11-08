@@ -26,7 +26,8 @@ const SOC = [
 
 const SCREENS = {
 finquer:`<div class="browser"><div class="bbar"><i></i><i></i><i></i><span>app.finquer.com/politicas</span></div>
- <div class="fq"><div class="fq-top"><b>Política de compras</b><span>v7 · publicada há 12 dias</span></div>
+ <div class="fq"><div class="fq-top"><img src="assets/img/logos/finquer.webp" alt="" width="442" height="120" loading="lazy" decoding="async"><span>v7 · publicada há 12 dias</span></div>
+  <div class="fq-h">Política de compras</div>
   <div class="fq-rule"><span class="n">1</span><span>Valor até R$ 3 mil e item de catálogo</span><em class="ok">Aprova sozinho</em></div>
   <div class="fq-rule"><span class="n">2</span><span>Valor acima de R$ 3 mil</span><em>Gestor do centro de custo</em></div>
   <div class="fq-rule"><span class="n">3</span><span>Valor acima de R$ 20 mil</span><em>Diretor financeiro</em></div>
