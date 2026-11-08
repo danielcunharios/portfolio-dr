@@ -25,6 +25,14 @@ const SOC = [
 ];
 
 const SCREENS = {
+finquer:`<div class="browser"><div class="bbar"><i></i><i></i><i></i><span>app.finquer.com/politicas</span></div>
+ <div class="fq"><div class="fq-top"><b>Política de compras</b><span>v7 · publicada há 12 dias</span></div>
+  <div class="fq-rule"><span class="n">1</span><span>Valor até R$ 3 mil e item de catálogo</span><em class="ok">Aprova sozinho</em></div>
+  <div class="fq-rule"><span class="n">2</span><span>Valor acima de R$ 3 mil</span><em>Gestor do centro de custo</em></div>
+  <div class="fq-rule"><span class="n">3</span><span>Valor acima de R$ 20 mil</span><em>Diretor financeiro</em></div>
+  <div class="fq-rule"><span class="n">4</span><span>Fornecedor não homologado</span><em class="no">Bloquear</em></div>
+  <div class="fq-ag"><b>Agente pesquisa-mercado</b><span>0,10 USDC por compra · 1,00 USDC por dia · x402 na Solana</span></div>
+ </div></div>`,
 foresail:`<div class="browser"><div class="bbar"><i></i><i></i><i></i><span>app.foresail.com.br/projetos/checkout-v2</span></div>
  <div class="fs"><aside><b>Foresail</b><span class="on"></span><span></span><span></span><span></span><span></span></aside>
  <div class="fs-main"><div class="gauge"><svg viewBox="0 0 100 60"><path d="M10 55a40 40 0 0 1 80 0" fill="none" stroke="var(--surface-2)" stroke-width="10" stroke-linecap="round"/><path d="M10 55a40 40 0 0 1 66-30" fill="none" stroke="var(--accent)" stroke-width="10" stroke-linecap="round"/></svg><b>72</b><small>Risk Score</small></div>
@@ -58,6 +66,16 @@ const JT_PROJECTS = [
 ];
 
 const CASES = [
+ { id:"finquer", screen:"finquer", title:"Finquer", year:"2026",
+   role:"Fundador · 2026 – hoje",
+   tags:[["live","site no ar"],["","SaaS · IA"],["","Compras e pagamentos"],["","Agentes de IA"]],
+   pitch:"Plataforma de compras que liga requisição, cotação, aprovação e pagamento numa política só. A mesma regra vale para o time de compras e para agentes de IA que compram dados e APIs. Fundei em 2026 e estou construindo o produto.",
+   kpis:[["4 etapas","requisição, cotação, aprovação e pagamento no mesmo lugar"],["1 política","a mesma regra para quem compra e para os agentes de IA"],["3 vias","pedido, nota e recebimento conferidos antes de pagar"],["Pix e boleto","pagos em lote por instituição autorizada pelo Banco Central"]],
+   stack:["Product","GTM","IA aplicada","B2B SaaS","Fintech","NF-e e ERP","x402 · Solana"], url:"https://finquer-site.vercel.app/",
+   context:"Compras ainda roda em e-mail e planilha, e o controle chega depois que o dinheiro saiu. Montar um comparativo de cotações leva de 3 a 6 horas, só reformatando PDF, foto e e-mail num mapa em Excel (estudo do Hackett Group citado pela imagetotable.ai). Em paralelo, agentes de IA já compram APIs e dados com cartão ou chave, fora de qualquer alçada.",
+   problem:"O pedido chega por WhatsApp, a cotação por e-mail e a aprovação some na caixa de entrada. Dado bancário de fornecedor muda por mensagem e ninguém confere a titularidade antes de pagar. E não existe regra nenhuma para o que os agentes de IA já estão comprando sozinhos.",
+   built:["Requisição por tipo, material, serviço, software ou viagem, cada um com as perguntas e a regra do seu tipo. Categoria, centro de custo e orçamento chegam a compras já checados, e quem pede sabe na hora se está fora do orçamento","Cotação contra a base de fornecedores homologados e contra a web, com comparativo de custo total: preço, frete, prazo de entrega e condição de pagamento trazidos a valor presente, com score do fornecedor","Políticas de alçada escritas como frases pelo próprio financeiro. A prévia mostra quantos pedidos dos últimos 90 dias a regra teria mudado, e cada publicação vira uma versão com autor e data","Contas a pagar com leitura da nota: o XML da NF-e traz os dados exatos, PDF e foto são lidos por IA, e todo campo que a IA preencheu fica marcado até alguém conferir. Antes de pagar, pedido, nota e recebimento são conferidos entre si","Pagamento em lote por Pix e boleto, com baixa no ERP. A Finquer decide e manda a ordem, mas não guarda nem movimenta dinheiro: quem executa é uma instituição autorizada pelo Banco Central","Agentes de IA com chave e política próprias: limite por compra, orçamento diário, fornecedores liberados e horário. Micropagamentos a APIs saem em USDC na Solana, pelo protocolo x402. O agente nunca aprova compra, nunca paga fornecedor em reais e nunca altera dado bancário","Trilha de auditoria encadeada por hash, segregação de funções, SSO com Google, Microsoft ou SAML e verificação em duas etapas obrigatória para aprovadores e financeiro"],
+   result:"Site no ar e produto em construção. Ainda não há cliente em produção, e os números que aparecem na demo do site são ilustrativos." },
  { id:"trenby", cover:["assets/img/trenby-hub-feira-time.webp","Time da Trenby no Hub Feira",960,1280], title:"Trenby", year:"2022",
    role:"Fundador · edtech · nov 2022 a jan 2026",
    tags:[["win","Semifinalista Liga Jovem · Sebrae"],["","2 acelerações"],["","Edtech"]],

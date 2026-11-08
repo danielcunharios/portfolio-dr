@@ -40,7 +40,7 @@ tools/                utilitários offline, fora do site e fora do deploy
 - **Não destacar a cidade atual.** O site deve deixar claro que ele está disponível para mudança. Não reintroduza "Feira de Santana" em títulos, rodapé, metadados ou imagem de compartilhamento.
 - **Sem "Open to Work" em destaque.** Só a nota discreta no bloco de contato ("Aberto a novas oportunidades...").
 - **Não citar a AsterBela** em nenhum lugar (é pessoal). **O app "Sprints 5W2H" não existe**: não o recrie.
-- **Ordem dos projetos:** 1. Trenby, 2. Just Travel e Travia, 3. KOBI, 4. Foresail (cases grandes em `CASES`), depois 5. LTEI, 6. Creators Teens · Mundo SENAI e 7. Descontaza (em `MORE`).
+- **Ordem dos projetos:** 1. Finquer, 2. Trenby, 3. Just Travel e Travia, 4. KOBI, 5. Foresail (cases grandes em `CASES`), depois 6. LTEI, 7. Creators Teens · Mundo SENAI e 8. Descontaza (em `MORE`).
 - **Imagens:** só as fotos que o Daniel enviar. Projetos sem foto usam painel de ícone (`ART`) ou tela recriada (`SCREENS`). Nunca deixe espaço vazio.
 - **Não usar o mascote no bloco de contato** (ficava cortado). No hero ele deve aparecer inteiro, sem cortar a cabeça.
 - URL de produção: **https://daniel-rios-my-portfolio.vercel.app/** (Vercel). Canonical, Open Graph, JSON-LD, robots e sitemap apontam para ela.
@@ -57,6 +57,7 @@ tools/                utilitários offline, fora do site e fora do deploy
 - Foresail: hackathon da Growthway, 3º lugar; Daniel liderou o time e a gestão do desenvolvimento.
 - Trenby: MVP com IA e ferramentas prontas; 1 escola pública como primeira adotante, 150+ alunos.
 - LTEI: primeira liga dos cursos de tecnologia da UNIFAN; Daniel fundou e preside; 50+ membros.
+- Finquer (fundada por ele em 2026, https://finquer-site.vercel.app/): plataforma de compras que liga requisição, cotação, aprovação e pagamento numa política só, que vale também para agentes de IA que compram dados e APIs. **Site no ar e produto em construção: não há cliente em produção e não existe métrica de resultado.** Os números que aparecem na demo do site são ilustrativos, e o próprio site diz isso; nunca os use como resultado do Daniel. O tempo de 3 a 6 h por comparativo é estudo do Hackett Group citado pela imagetotable.ai, não medição dele.
 
 ## Checklist de produção
 
@@ -78,9 +79,10 @@ tools/                utilitários offline, fora do site e fora do deploy
 - [x] Validar formalmente a conformidade do HTML. `index.html`, `404.html` e `styles.css` passam sem nenhum erro no validador Nu do W3C, incluindo o DOM já montado pelo JavaScript.
 - [x] Lighthouse com meta de 90+ em Performance, Acessibilidade, Boas práticas e SEO. Medido no domínio atual (nov/2026): **Acessibilidade, Boas práticas e SEO em 100** e Performance entre **98 e 100** em três rodadas, com CLS 0. O que fechou a conta: fontes no próprio site com `preload` e fallbacks de métricas casadas, `preload` do mascote do hero, `loading="lazy"` nas capas dos cases e `width`/`height` em todas as imagens.
 - Meça a Performance em produção **mais de uma vez**: o localhost esconde o CLS da troca de fonte, porque lá a fonte sempre chega antes da primeira pintura.
+- A Acessibilidade às vezes mede 96 em vez de 100, sempre pelo mesmo motivo: as palavras que giram no hero fazem *crossfade*, e quando o Lighthouse amostra no meio da transição o axe calcula a cor misturada e acusa contraste baixo. Parado, o texto é `--accent` sólido sobre o fundo, bem acima de AA. É estado transitório de animação, não um problema real; não redesenhe o rotador por causa disso.
 - [x] Verificar contraste AA dos textos e estados principais nos dois temas.
 - [x] Testar teclado: foco no menu, abrir/fechar case com Escape, galeria com as setas e busca da stack.
-- [x] Testar os links externos (sites dos projetos, referências e redes). Todos respondem e todos abrem em nova aba com `rel="noopener"`. **Exceção: `trenby.com.br` não resolve mais (domínio inexistente), então o link saiu do case e da experiência; o projeto continua no site.** Se o Daniel renovar o domínio, basta devolver `url` ao case `trenby` em `data.js` e o link na linha da Trenby no `index.html`.
+- [x] Testar os links externos (sites dos projetos, referências e redes), incluindo o da Finquer. Todos respondem e todos abrem em nova aba com `rel="noopener"`. **Exceção: `trenby.com.br` não resolve mais (domínio inexistente), então o link saiu do case e da experiência; o projeto continua no site.** Se o Daniel renovar o domínio, basta devolver `url` ao case `trenby` em `data.js` e o link na linha da Trenby no `index.html`.
 - [ ] Opcional: minificar CSS e JS no deploy, sem mudar os fontes. Com 100 de Performance não é necessário; a Vercel já comprime os arquivos na entrega.
 
 ### 4. Publicação
