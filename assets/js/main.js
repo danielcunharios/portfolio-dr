@@ -2,8 +2,8 @@
 const $=s=>document.querySelector(s);
 $("#cases-list").innerHTML = CASES.map(c=>`
  <article class="case">
-  ${c.screen?`<div class="shot">${SCREENS[c.screen]}<span class="cap">Recriação ilustrativa da interface</span></div>`
-    :c.cover?`<div class="shot photo"><img src="${c.cover[0]}" alt="${c.cover[1]}" width="${c.cover[2]}" height="${c.cover[3]}" loading="lazy" decoding="async"></div>`
+  ${c.cover?`<div class="shot photo"><img src="${c.cover[0]}" alt="${c.cover[1]}" width="${c.cover[2]}" height="${c.cover[3]}" loading="lazy" decoding="async"></div>`
+    :c.screen?`<div class="shot">${SCREENS[c.screen]}<span class="cap">Recriação ilustrativa da interface</span></div>`
     :`<div class="shot"><div class="art-panel"><span class="art-ic">${ART[c.art].icon}</span><div class="art-chips">${ART[c.art].chips.map(t=>`<span>${t}</span>`).join("")}</div></div></div>`}
   <div class="info">
    <div class="meta"><span class="tag">${c.year}</span>${c.tags.map(([k,t])=>`<span class="tag ${k}">${t}</span>`).join("")}</div>
@@ -15,7 +15,7 @@ $("#cases-list").innerHTML = CASES.map(c=>`
   </div>
  </article>`).join("");
 $("#more").innerHTML = MORE.map(m=>`<button class="mini" type="button" data-open="${m.id}">
-  <span class="cover">${m.photos?`<img src="${m.photos[0][0]}" alt="" width="${m.photos[0][2]}" height="${m.photos[0][3]}" loading="lazy" decoding="async"><span class="cnt">${m.photos.length} fotos</span>`:`<span class="ini">${m.art?ART[m.art].icon:""}</span>`}</span>
+  <span class="cover">${(c=>c?`<img src="${c[0]}" alt="" width="${c[2]}" height="${c[3]}" loading="lazy" decoding="async">${m.photos?`<span class="cnt">${m.photos.length} fotos</span>`:""}`:`<span class="ini">${m.art?ART[m.art].icon:""}</span>`)(m.cover||(m.photos&&m.photos[0]))}</span>
   <span class="top"><span class="yr">${m.year}</span>${m.url?'<span class="yr">no ar ↗</span>':''}</span><span class="ttl">${m.title}</span><span class="ds">${m.desc}</span><span class="go">Ver detalhes →</span></button>`).join("");
 
 const ALL=[...CASES,...MORE], dlg=$("#dlg"), sheet=$("#sheet");
@@ -28,6 +28,7 @@ function open(id,trigger){
   <header><span class="eyebrow">${c.year} · case</span><h3 id="dTitle">${c.title}</h3><p>${c.role}</p></header>
   <div class="body">
    ${c.photos?`<div class="blk"><h4>Fotos</h4><div class="gallery">${c.photos.map(([src,cap,width,height],i)=>`<button type="button" data-lb="${c.id}:${i}" aria-label="Ampliar foto: ${cap}"><img src="${src}" alt="${cap}" width="${width}" height="${height}" loading="lazy" decoding="async"></button>`).join("")}</div></div>`:""}
+   ${c.screen&&c.cover?`<div class="blk"><h4>Interface</h4><div class="shot in-sheet">${SCREENS[c.screen]}<span class="cap">Recriação ilustrativa da interface</span></div></div>`:""}
    ${c.recog?`<div class="blk"><h4>Reconhecimentos</h4><div class="recog">${c.recog.map(([a,b])=>`<span><b>${a}</b> · ${b}</span>`).join("")}</div></div>`:""}
    ${c.grants?`<div class="blk"><h4>Editais, licitações e competições</h4><div class="recog">${c.grants.map(g=>`<span>${g}</span>`).join("")}</div></div>`:""}
    ${c.events?`<div class="blk"><h4>Eventos</h4><div class="recog">${c.events.map(e=>`<span>${e}</span>`).join("")}</div></div>`:""}

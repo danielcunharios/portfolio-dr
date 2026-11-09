@@ -67,7 +67,7 @@ const JT_PROJECTS = [
 ];
 
 const CASES = [
- { id:"finquer", screen:"finquer", title:"Finquer", year:"2026",
+ { id:"finquer", screen:"finquer", cover:["assets/img/capa-finquer.webp","Marca da Finquer",1200,900], title:"Finquer", year:"2026",
    role:"Fundador · 2026 – hoje",
    tags:[["live","site no ar"],["","SaaS · IA"],["","Compras e pagamentos"],["","Agentes de IA"],["","Supernova Sebrae · em curso"]],
    pitch:"Plataforma de compras que liga requisição, cotação, aprovação e pagamento numa política só. A mesma regra vale para o time de compras e para agentes de IA que compram dados e APIs. Fundei em 2026 e estou construindo o produto.",
@@ -78,7 +78,7 @@ const CASES = [
    built:["Requisição por tipo, material, serviço, software ou viagem, cada um com as perguntas e a regra do seu tipo. Categoria, centro de custo e orçamento chegam a compras já checados, e quem pede sabe na hora se está fora do orçamento","Cotação contra a base de fornecedores homologados e contra a web, com comparativo de custo total: preço, frete, prazo de entrega e condição de pagamento trazidos a valor presente, com score do fornecedor","Políticas de alçada escritas como frases pelo próprio financeiro. A prévia mostra quantos pedidos dos últimos 90 dias a regra teria mudado, e cada publicação vira uma versão com autor e data","Contas a pagar com leitura da nota: o XML da NF-e traz os dados exatos, PDF e foto são lidos por IA, e todo campo que a IA preencheu fica marcado até alguém conferir. Antes de pagar, pedido, nota e recebimento são conferidos entre si","Pagamento em lote por Pix e boleto, com baixa no ERP. A Finquer decide e manda a ordem, mas não guarda nem movimenta dinheiro: quem executa é uma instituição autorizada pelo Banco Central","Agentes de IA com chave e política próprias: limite por compra, orçamento diário, fornecedores liberados e horário. Micropagamentos a APIs saem em USDC na Solana, pelo protocolo x402. O agente nunca aprova compra, nunca paga fornecedor em reais e nunca altera dado bancário","Trilha de auditoria encadeada por hash, segregação de funções, SSO com Google, Microsoft ou SAML e verificação em duas etapas obrigatória para aprovadores e financeiro"],
    refs:[["Pitch deck da Finquer","finquer-deck.html"]],
    result:"Site no ar e produto em construção. Ainda não há cliente em produção, e os números que aparecem na demo do site são ilustrativos. A Finquer está concorrendo na edição atual do Supernova, do Sebrae, com o resultado ainda não divulgado." },
- { id:"trenby", cover:["assets/img/trenby-hub-feira-time.webp","Time da Trenby no Hub Feira",960,1280], title:"Trenby", year:"2022",
+ { id:"trenby", cover:["assets/img/capa-trenby.webp","Marca da Trenby",1200,900], title:"Trenby", year:"2022",
    role:"Fundador · edtech · nov 2022 a jan 2026",
    tags:[["win","Semifinalista Liga Jovem · Sebrae"],["","2 acelerações"],["","Edtech"]],
    pitch:"Edtech que recompensava estudantes de escola pública conforme o engajamento e a evolução nos estudos. Fundei aos 16 anos, ainda no ensino médio.",
@@ -92,12 +92,12 @@ const CASES = [
    refs:[["Agência Sebrae Bahia: Equipe Trenby entre os semifinalistas do Desafio Liga Jovem 2023","https://ba.agenciasebrae.com.br/cultura-empreendedora/bahia-garante-duas-vagas-na-final-do-desafio-liga-jovem/"],["Instituto Neoenergia: Trenby entre as selecionadas do Impactô ODS 2025","https://www.neoenergia.com/web/instituto-neoenergia/colaboracao-institucional/impact%C3%B4-ods-2025"],["Novatores: programa de aceleração da UEFS","https://novatores.uefs.br"]],
    ig:[["trenbyeduca","o último post é de uma invasão que a conta sofreu, não é conteúdo nosso"]],
    photos:[["assets/img/trenby-hub-feira-time.webp","Time da Trenby no Hub Feira",960,1280],["assets/img/trenby-hub-feira-1.webp","Com a camisa da Trenby no Hub Feira",960,1280],["assets/img/trenby-hub-feira-2.webp","Hub Feira",960,1280]] },
- { id:"justtravel", cover:["assets/img/morro-chapada-equipe.webp","Equipe do Visite a Bahia em Morro do Chapéu, na Chapada Diamantina",1280,719], title:"Just Travel e Travia", year:"2024 – hoje",
+ { id:"justtravel", cover:["assets/img/travia-marca.webp","Travia, o SaaS de IA comercial da Just Travel",1280,720], title:"Just Travel e Travia", year:"2024 – hoje",
    role:"Just Travel · estágio, AI & Automation e hoje Business Development",
    tags:[["live","no ar"],["win","ROI médio de 347,7%"],["","SaaS · IA · B2G"],["","Embratur · Sebrae"]],
    pitch:"Na Just Travel lidero o go-to-market da Travia, um SaaS de IA comercial para o turismo. Antes, automatizei operações com n8n e Python e implantei em campo destinos digitais com o Governo da Bahia.",
    kpis:[["347,7%","ROI médio das primeiras vendas da Travia (out/26)"],["3 mil+","passageiros gerados pelo Visite Morro do Chapéu"],["~200 h/mês","poupadas com vouchers automáticos (400+/mês)"],["60+","empreendedores impactados no destino"]],
-   stack:["GTM","Arquitetura de receita","n8n","Python","CRM","WhatsApp API","B2G"], url:"https://travia.me",
+   stack:["GTM","Liderança","Arquitetura de receita","n8n","Python","CRM","WhatsApp API","B2G"], url:"https://travia.me",
    context:"A Just Travel é uma travel tech que une tecnologia e vendas no turismo. Além das plataformas de destino, a empresa realiza o Digitrade com a Embratur e o Sebrae: workshops presenciais e aceleração individual para empreendedores do turismo em 11 destinos do país, como Cavalcante (GO), Porto Alegre (RS), Alter do Chão (PA) e Cuiabá (MT). O trabalho com cidades e governo acontece dentro do Just Cidades, projeto da empresa que leva destinos digitais a municípios. Entrei como estagiário em 2024, passei por automação com IA e hoje estou em Business Development.",
    problem:"Agências, destinos e empreendedores do turismo perdem vendas por atendimento lento, processos manuais e pouca presença digital.",
    built:["Travia (2026): responsável pela estratégia de produto, pela máquina de vendas e pela arquitetura de receita do novo SaaS de IA comercial para o turismo. Primeiras vendas poucas semanas após o lançamento oficial, com ROI médio de 347,7% em outubro de 2026","Just Cidades: dentro desse projeto da Just Travel, que leva destinos digitais a municípios, implantei pessoalmente o Visite Morro do Chapéu e o Visite Maraú, por meses em campo, com mapeamento, capacitação e digitalização dos destinos, liderando a parte de produto junto com o time. No Visite Caravelas, contribuí presencialmente no mapeamento","Morro do Chapéu: mais de 60 empreendedores impactados, mais de 36 negócios mapeados e ativos online, mais de 3 mil passageiros gerados e ROI atingido em 8 meses","Automações com n8n e Python: qualificação inicial de leads integrada ao CRM (antes, pelo menos 20 minutos por lead), emissão automática de vouchers personalizados (400+ por mês, cerca de 30 minutos poupados em cada), notificação inteligente de vendas e cross-sell automático pelo WhatsApp","Giro Digital: projeto em parceria com a FLEM, em Salvador, executado pela Just Travel. Palestrei na edição mais recente","Digitrade, com a Embratur e o Sebrae: contribuí diretamente na criação da metodologia, no desenvolvimento dos conteúdos e na coleta de indicadores, com análise dos resultados","Just Europa: internacionalização da Just Travel na Europa, começando por Portugal, em parceria com a ApexBrasil, ainda no período em que eu era estagiário","Voucher Único e Painel do Produtor, produtos novos no ecossistema: o Voucher Único na etapa de venda presencial dentro dos destinos turísticos, e o Painel do Produtor na gestão simplificada de prestadores e fornecedores de turismo","Dashboard completo de acompanhamento de vendas no Metabase, construído ainda no estágio, com SQL e análise de dados","Fundraising da segunda rodada de investimentos, em contato com potenciais investidores, além de editais, competições de fomento à inovação e uma licitação"],
@@ -107,17 +107,17 @@ const CASES = [
    events:["ABAV Expo 2026","Web Summit Rio · 2025 e 2026","Just Academy 2026","Digitrade Salvador","Giro Digital · palestra","Lançamento do Visite Maraú","Lançamento do Visite Morro do Chapéu","Salão do Empreendedor · Sebrae"],
    ig:[["justtraveloficial","Just Travel"],["usetravia","Travia"]],
    links:JT_PROJECTS },
- { id:"kobi", art:"kobi", title:"KOBI", year:"2024",
+ { id:"kobi", cover:["assets/img/capa-kobi.webp","Marca da KOBI",1200,900], title:"KOBI", year:"2024",
    role:"Operações → Customer Success Lead · São Paulo, remoto",
    tags:[["","IA para vendas imobiliárias"],["","Customer Success"]],
    pitch:"Startup de IA em que incorporadoras acompanham e reativam corretores parceiros pelo WhatsApp. Comecei em operações e assumi o Customer Success.",
    kpis:[["8 meses","de operações a liderança de CS"],["Churn","sob minha responsabilidade direta"]],
-   stack:["Customer Success","Retenção","Operações","PaaS"], url:"https://www.usekobi.ai/",
+   stack:["Customer Success","Liderança","Retenção","Operações","PaaS"], url:"https://www.usekobi.ai/",
    context:"Startup de São Paulo que usa IA para dar às incorporadoras visão em tempo real dos corretores parceiros.",
    problem:"Uma base de clientes em crescimento precisava de processo de sucesso do cliente e de controle de churn.",
    built:["Apoio às operações da plataforma e ao desenvolvimento do produto","Estruturação do processo de Customer Success e de relacionamento com os clientes","Responsável direto pelo controle de churn durante os meses em que liderei o setor"],
    result:"Processo de CS estruturado e churn acompanhado de perto por mim enquanto liderei o setor." },
- { id:"foresail", screen:"foresail", title:"Foresail", year:"2026",
+ { id:"foresail", screen:"foresail", cover:["assets/img/capa-foresail.webp","Marca do Foresail",1200,900], title:"Foresail", year:"2026",
    role:"Hackathon Growthway · líder do time",
    tags:[["live","no ar"],["win","3º de 30+ times"],["","SaaS · IA"]],
    pitch:"SaaS que conecta GitHub e ferramentas de gestão e usa IA para calcular, em tempo real, o risco de cada projeto de software. Liderei o time e a gestão do desenvolvimento.",
@@ -130,7 +130,7 @@ const CASES = [
    learn:"Mostrar primeiro o que o usuário precisa ver (o score e os 3 alertas) fez a banca entender o produto em segundos." }
 ];
 const MORE = [
- { id:"ltei", title:"LTEI · UNIFAN", year:"2026", url:"https://lteiunifan.com.br/", desc:"Primeira liga dos cursos de tecnologia da UNIFAN. Fundei, presido e organizo encontros com empresários para os 50+ membros.",
+ { id:"ltei", cover:["assets/img/capa-ltei.webp","Marca da LTEI",1200,900], title:"LTEI · UNIFAN", year:"2026", url:"https://lteiunifan.com.br/", desc:"Primeira liga dos cursos de tecnologia da UNIFAN. Fundei, presido e organizo encontros com empresários para os 50+ membros.",
    role:"Fundador e presidente", context:"Primeira liga acadêmica dos cursos de tecnologia da UNIFAN (Engenharia de Software, Engenharia da Computação e ADS), voluntária e gratuita, com coordenação docente e diretoria de alunos.", problem:"Alunos de tecnologia tinham ideias e projetos, mas pouco contato com o mercado e nenhum espaço para transformá-los em negócio.",
    built:["Fundação da primeira liga dos cursos de tecnologia da instituição","Founder Talk: encontros com empresários de impacto para os mais de 50 membros","Market Sync: visitas e conexões com empresas e instituições","Journey: encontros práticos para validar e evoluir projetos","Radar de oportunidades com hackathons, editais e prêmios, e o site lteiunifan.com.br"],
    result:"Liga lançada em setembro de 2026, com mais de 50 membros. Em outubro fizemos o Founder Talk #01, com mais de 20 pessoas na sala.",
@@ -140,7 +140,7 @@ const MORE = [
  { id:"creators", art:"stage", title:"Creators Teens · Mundo SENAI", year:"SENAI", desc:"Evento de inovação que organizei no ensino médio, com empresários da região e centenas de jovens.",
    role:"Organizador", context:"Evento realizado no SENAI Bahia, ainda no ensino médio.", problem:"Jovens tinham pouco acesso a conteúdo prático sobre inovação, tecnologia e empreendedorismo, e pouco contato com quem empreende.",
    built:["Organização do evento em um fim de semana","Reunião de empresários relevantes da região","Conteúdos sobre inovação, tecnologia e empreendedorismo"], result:"Centenas de jovens impactados em um fim de semana.", stack:["Eventos","Comunidade","Educação"] },
- { id:"descontaza", art:"bag", title:"Descontaza", year:"2021", desc:"Meu primeiro negócio, fundado aos 15 anos: soluções para pequenos lojistas e vendedores sem estoque.",
+ { id:"descontaza", cover:["assets/img/capa-descontaza.webp","Marca da Descontaza",1200,900], title:"Descontaza", year:"2021", desc:"Meu primeiro negócio, fundado aos 15 anos: soluções para pequenos lojistas e vendedores sem estoque.",
    role:"Fundador", context:"Meu primeiro negócio, fundado aos 15 anos.", problem:"Pequenos lojistas sem ferramentas para vender sem estoque.",
    built:["Definição de público-alvo e mapa de concorrentes","Estratégia de marketing e vendas com o time"], result:"Primeira experiência liderando um time do zero.", stack:["Varejo","Vendas"] }
 ];
