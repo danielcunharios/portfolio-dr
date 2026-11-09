@@ -137,7 +137,7 @@ const MORE = [
    photos:[["assets/img/ltei-founder-talk-01.webp","Founder Talk #01: membros da LTEI com o convidado",1280,720],["assets/img/ltei-founder-talk-abertura.webp","Abertura do Founder Talk #01",720,1280],["assets/img/ltei-founder-talk-convidado.webp","Apresentação do convidado do Founder Talk #01",720,1280]],
    ig:[["ltei.unifan","LTEI · UNIFAN"]],
    stack:["Comunidade","Liderança","Eventos"] },
- { id:"creators", art:"stage", title:"Creators Teens · Mundo SENAI", year:"SENAI", desc:"Evento de inovação que organizei no ensino médio, com empresários da região e centenas de jovens.",
+ { id:"creators", cover:["assets/img/capa-creators-teens.webp","Marca do Creators Teen",1200,900], title:"Creators Teens · Mundo SENAI", year:"SENAI", desc:"Evento de inovação que organizei no ensino médio, com empresários da região e centenas de jovens.",
    role:"Organizador", context:"Evento realizado no SENAI Bahia, ainda no ensino médio.", problem:"Jovens tinham pouco acesso a conteúdo prático sobre inovação, tecnologia e empreendedorismo, e pouco contato com quem empreende.",
    built:["Organização do evento em um fim de semana","Reunião de empresários relevantes da região","Conteúdos sobre inovação, tecnologia e empreendedorismo"], result:"Centenas de jovens impactados em um fim de semana.", stack:["Eventos","Comunidade","Educação"] },
  { id:"descontaza", cover:["assets/img/capa-descontaza.webp","Marca da Descontaza",1200,900], title:"Descontaza", year:"2021", desc:"Meu primeiro negócio, fundado aos 15 anos: soluções para pequenos lojistas e vendedores sem estoque.",
