@@ -29,6 +29,7 @@ function open(id,trigger){
   <div class="body">
    ${c.photos?`<div class="blk"><h4>Fotos</h4><div class="gallery">${c.photos.map(([src,cap,width,height],i)=>`<button type="button" data-lb="${c.id}:${i}" aria-label="Ampliar foto: ${cap}"><img src="${src}" alt="${cap}" width="${width}" height="${height}" loading="lazy" decoding="async"></button>`).join("")}</div></div>`:""}
    ${c.recog?`<div class="blk"><h4>Reconhecimentos</h4><div class="recog">${c.recog.map(([a,b])=>`<span><b>${a}</b> · ${b}</span>`).join("")}</div></div>`:""}
+   ${c.grants?`<div class="blk"><h4>Editais, licitações e competições</h4><div class="recog">${c.grants.map(g=>`<span>${g}</span>`).join("")}</div></div>`:""}
    ${c.events?`<div class="blk"><h4>Eventos</h4><div class="recog">${c.events.map(e=>`<span>${e}</span>`).join("")}</div></div>`:""}
    ${c.context?`<div class="blk"><h4>Contexto</h4><p>${c.context}</p></div>`:""}
    <div class="blk"><h4>Problema</h4><p>${c.problem}</p></div>
