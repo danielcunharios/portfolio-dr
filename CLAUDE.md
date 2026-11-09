@@ -41,6 +41,7 @@ tools/                utilitários offline, fora do site e fora do deploy
 - **Sem "Open to Work" em destaque.** Só a nota discreta no bloco de contato ("Aberto a novas oportunidades...").
 - **Não citar a AsterBela** em nenhum lugar (é pessoal). **O app "Sprints 5W2H" não existe**: não o recrie.
 - **Ordem dos projetos:** 1. Finquer, 2. Trenby, 3. Just Travel e Travia, 4. KOBI, 5. Foresail (cases grandes em `CASES`), depois 6. LTEI, 7. Creators Teens · Mundo SENAI e 8. Descontaza (em `MORE`).
+- **Projetos e negócios são blocos separados na experiência.** "Projetos que fundei" reúne Finquer e LTEI; "Negócios que fundei" reúne Trenby e Descontaza. A LTEI é liga acadêmica sem fins lucrativos, então não entra como negócio.
 - **Imagens:** só as fotos que o Daniel enviar. Projetos sem foto usam painel de ícone (`ART`) ou tela recriada (`SCREENS`). Nunca deixe espaço vazio.
 - **Não usar o mascote no bloco de contato** (ficava cortado). No hero ele deve aparecer inteiro, sem cortar a cabeça.
 - URL de produção: **https://daniel-rios-my-portfolio.vercel.app/** (Vercel). Canonical, Open Graph, JSON-LD, robots e sitemap apontam para ela.
@@ -52,12 +53,14 @@ tools/                utilitários offline, fora do site e fora do deploy
 - Formação: Técnico em TI pelo SENAI; Análise e Desenvolvimento de Sistemas na UNIFAN (ago/2026 a dez/2028). Inglês básico; não fala espanhol.
 - Hobbies: jiu-jitsu, séries e filmes, jogos online, gastronomia e viagens.
 - Just Travel: estágio (fundraising da 2ª rodada, editais, competições de fomento e 1 licitação) → AI & Automation (n8n e Python: qualificação de leads integrada ao CRM, antes 20+ min por lead; vouchers automáticos, 400+/mês, ~30 min cada; notificação inteligente de vendas; cross-sell pelo WhatsApp) → Business Development (GTM da Travia: estratégia de produto, máquina de vendas e arquitetura de receita; primeiras vendas com ROI médio de 347,7% em out/26). Implantou em campo o Visite Morro do Chapéu e o Visite Maraú (mapeamento, capacitação, digitalização, liderando produto).
+- Just Cidades: projeto da Just Travel que leva destinos digitais a municípios. É dentro dele que entram o Visite Morro do Chapéu e o Visite Maraú, e o trabalho com cidades e governo.
+- Áreas que o Daniel também quer no radar, com lastro no que já fez: gestão de projetos (liderou o time e o desenvolvimento no hackathon da Growthway, e implantou destinos em campo), CS/CX (estruturou o CS e o churn na KOBI) e venture capital/financeiro (fundraising da 2ª rodada da Just Travel, editais e competições; e a própria Finquer, que é de compras e pagamentos).
 - Visite Morro do Chapéu: 60+ empreendedores impactados, 36+ negócios mapeados e ativos online, 3 mil+ passageiros gerados, ROI em 8 meses.
 - KOBI: estruturou o processo de CS e relacionamento; responsável direto pelo controle de churn.
 - Foresail: hackathon da Growthway, 3º lugar; Daniel liderou o time e a gestão do desenvolvimento.
 - Trenby: MVP com IA e ferramentas prontas; 1 escola pública como primeira adotante, 150+ alunos.
 - LTEI: primeira liga dos cursos de tecnologia da UNIFAN; Daniel fundou e preside; 50+ membros.
-- Finquer (fundada por ele em 2026, https://finquer-site.vercel.app/): plataforma de compras que liga requisição, cotação, aprovação e pagamento numa política só, que vale também para agentes de IA que compram dados e APIs. **Site no ar e produto em construção: não há cliente em produção e não existe métrica de resultado.** Os números que aparecem na demo do site são ilustrativos, e o próprio site diz isso; nunca os use como resultado do Daniel. O tempo de 3 a 6 h por comparativo é estudo do Hackett Group citado pela imagetotable.ai, não medição dele.
+- Finquer (fundada por ele em 2026, https://finquer-site.vercel.app/): plataforma de compras que liga requisição, cotação, aprovação e pagamento numa política só, que vale também para agentes de IA que compram dados e APIs. **Site no ar e produto em construção: não há cliente em produção e não existe métrica de resultado.** Os números que aparecem na demo do site são ilustrativos, e o próprio site diz isso; nunca os use como resultado do Daniel. O tempo de 3 a 6 h por comparativo é estudo do Hackett Group citado pela imagetotable.ai, não medição dele. A Finquer concorre na edição atual do Supernova, do Sebrae, com **resultado ainda não divulgado**: nunca escreva que ela ganhou, foi finalista ou passou de fase.
 
 ## Checklist de produção
 
@@ -72,6 +75,7 @@ tools/                utilitários offline, fora do site e fora do deploy
 - [x] Configurar `canonical`, Open Graph, Twitter Cards e JSON-LD para `https://daniel-rios-my-portfolio.vercel.app/`.
 - [x] Criar `robots.txt`, `sitemap.xml` e `404.html`.
 - [x] Confirmar palavras-chave de GTM, RevOps, Product, Sales, Business Development, Dados e IA nos metadados e no JSON-LD.
+- [x] O JSON-LD é um `@graph` com WebSite, ProfilePage, Person e as Organizations da Finquer e da LTEI, com `knowsAbout` (44 termos), `hasOccupation`, `award`, `knowsLanguage` e `memberOf`. É aí que mora o peso de SEO para buscadores e para IA, não em `<meta name="keywords">`, que o Google ignora desde 2009. Ao somar uma área nova ao site, some também em `knowsAbout` e em `hasOccupation`.
 
 ### 3. Qualidade do código
 - [x] Rodar o site localmente por HTTP e checar o console sem erros, em desktop e em 375px, nos temas claro e escuro.
