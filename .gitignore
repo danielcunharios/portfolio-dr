@@ -5,3 +5,6 @@ node_modules/
 # Material de origem do Daniel, fora do site publicado
 daniel-rios-pacote/
 *.patch
+
+# Material bruto que o Daniel manda; nao vai para o site
+Registros daniel/

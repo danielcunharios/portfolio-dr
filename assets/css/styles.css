@@ -280,8 +280,10 @@ section.sec{padding-block:88px}
 .refs a{display:inline-flex;gap:8px;align-items:center;text-decoration:none;font-weight:600;border-bottom:1px solid var(--line)}
 .refs a:hover{color:var(--accent);border-color:var(--accent)}
 .recog{display:flex;flex-wrap:wrap;gap:8px}
-.recog span{font-size:13px;font-weight:600;border:1px solid var(--line);border-radius:999px;padding:5px 12px}
-.recog span b{color:var(--accent)}
+.recog span,.recog a{font-size:13px;font-weight:600;border:1px solid var(--line);border-radius:999px;padding:5px 12px}
+.recog a{text-decoration:none;transition:border-color .2s}
+.recog a:hover{border-color:var(--ink)}
+.recog span b,.recog a b{color:var(--accent)}
 #lb{max-width:min(1100px,calc(100vw - 16px))}
 #lb::backdrop{background:rgba(3,4,8,.92)}
 .lbx{position:relative;display:grid;gap:12px;justify-items:center}

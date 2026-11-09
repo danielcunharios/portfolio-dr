@@ -29,12 +29,14 @@ function open(id,trigger){
   <div class="body">
    ${c.photos?`<div class="blk"><h4>Fotos</h4><div class="gallery">${c.photos.map(([src,cap,width,height],i)=>`<button type="button" data-lb="${c.id}:${i}" aria-label="Ampliar foto: ${cap}"><img src="${src}" alt="${cap}" width="${width}" height="${height}" loading="lazy" decoding="async"></button>`).join("")}</div></div>`:""}
    ${c.recog?`<div class="blk"><h4>Reconhecimentos</h4><div class="recog">${c.recog.map(([a,b])=>`<span><b>${a}</b> · ${b}</span>`).join("")}</div></div>`:""}
+   ${c.events?`<div class="blk"><h4>Eventos</h4><div class="recog">${c.events.map(e=>`<span>${e}</span>`).join("")}</div></div>`:""}
    ${c.context?`<div class="blk"><h4>Contexto</h4><p>${c.context}</p></div>`:""}
    <div class="blk"><h4>Problema</h4><p>${c.problem}</p></div>
    <div class="blk"><h4>O que construí</h4><ul>${c.built.map(b=>`<li>${b}</li>`).join("")}</ul></div>
    ${c.result?`<div class="blk"><h4>Resultado</h4><p>${c.result}</p></div>`:""}
    ${c.learn?`<div class="blk"><h4>O que aprendi</h4><p>${c.learn}</p></div>`:""}
    ${c.links?`<div class="blk"><h4>Projetos no ecossistema Just Travel</h4><div class="jt-projects">${c.links.map(([n,u,t,ds,mine])=>`<a class="jtp" href="${u}" target="_blank" rel="noopener"><span class="tg">${mine?"minha atuação":t}</span><b>${n} <i>↗</i></b><span>${ds}</span><small>${u.replace(/^https?:\/\/(www\.)?/,"").replace(/\/(pt)?$/,"").replace(/\/$/,"")}</small></a>`).join("")}</div></div>`:""}
+   ${c.ig?`<div class="blk"><h4>Instagram</h4><div class="recog">${c.ig.map(([h,n])=>`<a href="https://www.instagram.com/${h}/" target="_blank" rel="noopener"><b>@${h}</b>${n?` · ${n}`:""}</a>`).join("")}</div></div>`:""}
    ${c.refs?`<div class="blk"><h4>Referências</h4><ul class="refs">${c.refs.map(([t,u])=>`<li><a href="${u}" target="_blank" rel="noopener">${t} ↗</a></li>`).join("")}</ul></div>`:""}
    <div class="blk"><h4>Stack e temas</h4><div class="stack-line">${c.stack.map(s=>`<span>${s}</span>`).join("")}</div></div>
    <div class="case-actions">${c.url?`<a class="btn primary" href="${c.url}" target="_blank" rel="noopener">Ver no ar ↗</a>`:""}<button class="btn" type="button" data-close>Voltar</button></div>
